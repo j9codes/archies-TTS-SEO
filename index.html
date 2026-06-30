@@ -1,703 +1,1360 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Archies Footwear SEO & TikTok Shop Keyword Optimization Tool — US Market">
-<title>Archies Footwear — SEO & TikTok Shop Optimizer (US)</title>
+<title>TikTok Shop SEO Studio</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
 <style>
-  :root {
-    --bg: #f5f5f3;
-    --surface: #ffffff;
-    --surface-alt: #f9f9f8;
-    --border: rgba(0,0,0,0.10);
-    --border-strong: rgba(0,0,0,0.18);
-    --text: #0b0b0b;
-    --text-sec: #52514e;
-    --text-muted: #898781;
-    --accent: #185fa5;
-    --accent-bg: #e6f1fb;
-    --accent-text: #185fa5;
-    --success: #0ca30c;
-    --success-bg: #eaf3de;
-    --warning: #ba7517;
-    --warning-bg: #faeeda;
-    --danger: #a32d2d;
-    --danger-bg: #fcebeb;
-    --purple: #4a3aa7;
-    --purple-bg: #eeedfe;
-    --radius: 8px;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #141413;
-      --surface: #1e1e1c;
-      --surface-alt: #252523;
-      --border: rgba(255,255,255,0.10);
-      --border-strong: rgba(255,255,255,0.18);
-      --text: #f0ede8;
-      --text-sec: #c3c2b7;
-      --text-muted: #898781;
-      --accent: #3987e5;
-      --accent-bg: #0c2d52;
-      --accent-text: #85b7eb;
-      --success: #199e70;
-      --success-bg: #04342c;
-      --warning: #ef9f27;
-      --warning-bg: #412402;
-      --danger: #e66767;
-      --danger-bg: #501313;
-      --purple: #9085e9;
-      --purple-bg: #26215c;
-    }
-  }
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; font-size: 16px; line-height: 1.5; }
+:root {
+  --bg: #0a0a0f;
+  --surface: #13131a;
+  --surface-2: #1c1c26;
+  --surface-3: #222230;
+  --border: rgba(255,255,255,0.07);
+  --border-2: rgba(255,255,255,0.13);
+  --text: #f0eff8;
+  --text-sec: #a09eb8;
+  --text-muted: #5e5c78;
+  --tt: #fe2c55;
+  --tt-bg: rgba(254,44,85,0.12);
+  --tt-2: #ff6384;
+  --accent: #7c5cfc;
+  --accent-bg: rgba(124,92,252,0.13);
+  --accent-text: #b09eff;
+  --green: #22c98e;
+  --green-bg: rgba(34,201,142,0.12);
+  --yellow: #f5a623;
+  --yellow-bg: rgba(245,166,35,0.12);
+  --red: #f03e3e;
+  --red-bg: rgba(240,62,62,0.12);
+  --radius: 10px;
+  --radius-sm: 6px;
+}
 
-  /* HEADER */
-  .site-header { background: var(--surface); border-bottom: 0.5px solid var(--border); padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 56px; position: sticky; top: 0; z-index: 100; }
-  .logo { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 15px; color: var(--text); text-decoration: none; }
-  .logo-dot { width: 28px; height: 28px; border-radius: 8px; background: var(--accent); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 700; }
-  .header-meta { font-size: 12px; color: var(--text-muted); display: flex; align-items: center; gap: 8px; }
-  .us-badge { background: var(--accent-bg); color: var(--accent-text); font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 20px; border: 0.5px solid var(--accent); }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  /* LAYOUT */
-  .app { max-width: 1100px; margin: 0 auto; padding: 24px 16px; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  font-size: 15px;
+  line-height: 1.5;
+}
 
-  /* TABS */
-  .tabs { display: flex; gap: 2px; border-bottom: 0.5px solid var(--border); margin-bottom: 24px; overflow-x: auto; }
-  .tab { padding: 10px 16px; font-size: 14px; font-weight: 500; cursor: pointer; border: none; background: transparent; color: var(--text-muted); border-bottom: 2px solid transparent; margin-bottom: -1px; white-space: nowrap; display: flex; align-items: center; gap: 6px; transition: color 0.15s; }
-  .tab.active { color: var(--accent); border-bottom-color: var(--accent); }
-  .tab:hover:not(.active) { color: var(--text); }
-  .tab i { font-size: 16px; }
-  .panel { display: none; }
-  .panel.active { display: block; }
+/* ── HEADER ── */
+.header {
+  background: var(--surface);
+  border-bottom: 0.5px solid var(--border-2);
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 54px;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--text);
+  text-decoration: none;
+}
+.logo-icon {
+  width: 30px; height: 30px;
+  background: linear-gradient(135deg, var(--tt) 0%, var(--accent) 100%);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 15px;
+}
+.header-right {
+  display: flex; align-items: center; gap: 10px;
+}
+.market-badge {
+  font-size: 11px; font-weight: 600;
+  padding: 4px 10px; border-radius: 20px;
+  background: var(--tt-bg); color: var(--tt);
+  border: 0.5px solid rgba(254,44,85,0.3);
+}
 
-  /* GRIDS */
-  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
-  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 20px; }
-  .grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 20px; }
-  @media (max-width: 768px) {
-    .grid2, .grid3, .grid4 { grid-template-columns: 1fr 1fr; }
-  }
-  @media (max-width: 480px) {
-    .grid2, .grid3, .grid4 { grid-template-columns: 1fr; }
-  }
+/* ── LAYOUT ── */
+.app { max-width: 1200px; margin: 0 auto; padding: 24px 16px 48px; }
 
-  /* CARDS */
-  .card { background: var(--surface); border: 0.5px solid var(--border); border-radius: 12px; padding: 20px; }
-  .metric-card { background: var(--surface-alt); border-radius: var(--radius); padding: 16px; }
-  .metric-label { font-size: 12px; color: var(--text-muted); margin-bottom: 4px; letter-spacing: .02em; }
-  .metric-val { font-size: 24px; font-weight: 600; color: var(--text); }
-  .metric-val span { font-size: 14px; font-weight: 400; }
-  .metric-delta { font-size: 12px; margin-top: 4px; color: var(--text-muted); display: flex; align-items: center; gap: 4px; }
-  .up { color: var(--success); }
-  .dn { color: var(--danger); }
+/* ── TABS ── */
+.tabs {
+  display: flex; gap: 2px;
+  border-bottom: 0.5px solid var(--border-2);
+  margin-bottom: 28px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.tabs::-webkit-scrollbar { display: none; }
+.tab {
+  padding: 10px 16px;
+  font-size: 13px; font-weight: 500;
+  cursor: pointer; border: none;
+  background: transparent; color: var(--text-muted);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  white-space: nowrap;
+  display: flex; align-items: center; gap: 6px;
+  transition: color 0.15s;
+  font-family: inherit;
+}
+.tab.active { color: var(--tt); border-bottom-color: var(--tt); }
+.tab:hover:not(.active) { color: var(--text-sec); }
+.tab i { font-size: 15px; }
+.panel { display: none; }
+.panel.active { display: block; }
 
-  /* SECTION LABELS */
-  .section-label { font-size: 11px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 12px; }
-  h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 12px; }
+/* ── GRID ── */
+.g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+.g3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-bottom: 16px; }
+.g4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; margin-bottom: 16px; }
+@media (max-width: 780px) { .g2,.g3,.g4 { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) { .g2,.g3,.g4 { grid-template-columns: 1fr; } }
 
-  /* BADGES */
-  .badge { display: inline-flex; align-items: center; font-size: 11px; padding: 3px 8px; border-radius: 20px; font-weight: 600; }
-  .badge-tiktok { background: var(--purple-bg); color: var(--purple); }
-  .badge-high { background: var(--success-bg); color: var(--success); }
-  .badge-med { background: var(--warning-bg); color: var(--warning); }
-  .badge-low { background: var(--danger-bg); color: var(--danger); }
-  .badge-accent { background: var(--accent-bg); color: var(--accent-text); }
+/* ── CARDS ── */
+.card {
+  background: var(--surface);
+  border: 0.5px solid var(--border-2);
+  border-radius: 12px;
+  padding: 20px;
+}
+.card + .card { margin-top: 0; }
 
-  /* PILLS */
-  .pill-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
-  .pill { font-size: 12px; padding: 5px 12px; border-radius: 20px; border: 0.5px solid var(--border-strong); cursor: pointer; color: var(--text-sec); background: var(--surface); transition: all 0.15s; font-weight: 500; }
-  .pill.on { background: var(--accent-bg); color: var(--accent-text); border-color: var(--accent); }
-  .pill:hover:not(.on) { border-color: var(--border-strong); color: var(--text); }
+.metric {
+  background: var(--surface-2);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+}
+.metric-label { font-size: 11px; color: var(--text-muted); margin-bottom: 5px; letter-spacing: .04em; text-transform: uppercase; font-weight: 600; }
+.metric-val { font-size: 26px; font-weight: 700; color: var(--text); }
+.metric-val span { font-size: 14px; font-weight: 400; color: var(--text-sec); }
+.metric-sub { font-size: 11px; color: var(--text-muted); margin-top: 4px; display: flex; align-items: center; gap: 4px; }
+.up { color: var(--green); }
+.dn { color: var(--red); }
 
-  /* KEYWORD ROWS */
-  .kw-row { display: flex; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 0.5px solid var(--border); }
-  .kw-row:last-child { border-bottom: none; }
-  .kw-name { flex: 1; font-size: 14px; color: var(--text); font-weight: 500; }
-  .kw-vol { font-size: 12px; color: var(--text-sec); min-width: 64px; text-align: right; }
-  .bar-wrap { flex: 1; height: 5px; background: var(--bg); border-radius: 3px; overflow: hidden; min-width: 60px; }
-  .bar-fill { height: 100%; border-radius: 3px; }
+/* ── LABELS ── */
+.label { font-size: 11px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 10px; }
+h3 { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 12px; }
 
-  /* INPUTS */
-  .input-row { display: flex; gap: 8px; margin-bottom: 14px; }
-  .input-row input, input.full { width: 100%; padding: 9px 12px; border: 0.5px solid var(--border-strong); border-radius: var(--radius); font-size: 14px; background: var(--surface); color: var(--text); outline: none; font-family: inherit; }
-  .input-row input:focus, input.full:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(24,95,165,0.12); }
-  .btn-primary { padding: 9px 18px; border-radius: var(--radius); background: var(--accent); color: #fff; border: none; cursor: pointer; font-size: 14px; font-weight: 600; font-family: inherit; transition: opacity 0.15s; }
-  .btn-primary:hover { opacity: 0.88; }
-  .btn-outline { padding: 8px 16px; border-radius: var(--radius); border: 0.5px solid var(--accent); background: var(--accent-bg); color: var(--accent-text); cursor: pointer; font-size: 13px; font-weight: 600; font-family: inherit; transition: all 0.15s; width: 100%; margin-top: 12px; }
-  .btn-outline:hover { background: var(--accent); color: #fff; }
+/* ── BADGES ── */
+.badge {
+  display: inline-flex; align-items: center;
+  font-size: 11px; padding: 2px 8px; border-radius: 20px; font-weight: 600;
+}
+.b-tt    { background: var(--tt-bg); color: var(--tt); }
+.b-green { background: var(--green-bg); color: var(--green); }
+.b-yellow{ background: var(--yellow-bg); color: var(--yellow); }
+.b-red   { background: var(--red-bg); color: var(--red); }
+.b-purple{ background: var(--accent-bg); color: var(--accent-text); }
 
-  /* LISTING TOOL */
-  .listing-textarea { width: 100%; padding: 10px 12px; border: 0.5px solid var(--border-strong); border-radius: var(--radius); font-size: 14px; background: var(--surface); color: var(--text); resize: vertical; min-height: 80px; outline: none; font-family: inherit; line-height: 1.5; }
-  .listing-textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(24,95,165,0.12); }
-  .score-block { display: flex; align-items: center; gap: 14px; margin: 14px 0; }
-  .score-ring { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 700; border: 3px solid; flex-shrink: 0; }
-  .char-count { font-size: 11px; color: var(--text-muted); text-align: right; margin-top: 4px; }
+/* ── PILLS ── */
+.pills { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+.pill {
+  font-size: 12px; padding: 5px 13px; border-radius: 20px;
+  border: 0.5px solid var(--border-2); cursor: pointer;
+  color: var(--text-sec); background: var(--surface-2);
+  transition: all 0.15s; font-weight: 500; font-family: inherit;
+}
+.pill.on { background: var(--tt-bg); color: var(--tt); border-color: rgba(254,44,85,0.4); }
+.pill:hover:not(.on) { color: var(--text); border-color: var(--border-2); }
 
-  /* CHIPS */
-  .tag-wrap { display: flex; flex-wrap: wrap; gap: 6px; }
-  .suggested-chip { background: var(--surface-alt); border: 0.5px solid var(--border-strong); border-radius: var(--radius); padding: 5px 10px; font-size: 12px; cursor: pointer; color: var(--text-sec); font-weight: 500; transition: all 0.15s; font-family: inherit; }
-  .suggested-chip:hover { border-color: var(--accent); color: var(--accent-text); background: var(--accent-bg); }
+/* ── INPUTS ── */
+input, textarea, select {
+  background: var(--surface-2);
+  border: 0.5px solid var(--border-2);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+input:focus, textarea:focus, select:focus {
+  border-color: var(--tt);
+  box-shadow: 0 0 0 3px rgba(254,44,85,0.12);
+}
+input { padding: 9px 12px; width: 100%; }
+textarea { padding: 10px 12px; width: 100%; resize: vertical; min-height: 90px; line-height: 1.5; }
+select { padding: 9px 12px; cursor: pointer; }
 
-  /* PREVIEWS */
-  .google-preview { background: var(--surface-alt); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 12px 16px; margin-bottom: 14px; }
-  .google-preview .gp-title { font-size: 16px; color: #1a0dab; margin-bottom: 3px; font-weight: 500; }
-  .google-preview .gp-url { font-size: 13px; color: #006621; margin-bottom: 2px; }
-  .google-preview .gp-desc { font-size: 13px; color: var(--text-sec); }
-  .tiktok-preview { background: #111; border-radius: 10px; padding: 14px 16px; }
-  .tiktok-preview .tt-title { color: #fff; font-size: 15px; font-weight: 600; margin-bottom: 5px; }
-  .tiktok-preview .tt-meta { color: #aaa; font-size: 12px; margin-bottom: 6px; }
-  .tiktok-preview .tt-tags { color: #fe2c55; font-size: 13px; font-weight: 500; }
+.input-row { display: flex; gap: 8px; margin-bottom: 12px; }
+.input-row input { flex: 1; }
 
-  /* COMPETITOR TABLE */
-  .comp-grid { display: grid; grid-template-columns: 180px repeat(4, 1fr); gap: 8px; align-items: center; padding: 9px 0; border-bottom: 0.5px solid var(--border); font-size: 13px; }
-  .comp-grid:last-child { border-bottom: none; }
-  .comp-head-row { display: grid; grid-template-columns: 180px repeat(4, 1fr); gap: 8px; padding-bottom: 10px; border-bottom: 0.5px solid var(--border); }
-  .comp-head { font-size: 11px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: .04em; }
-  .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; margin-right: 5px; }
-  @media (max-width: 700px) {
-    .comp-grid, .comp-head-row { grid-template-columns: 120px repeat(4,1fr); font-size: 12px; }
-  }
+/* ── BUTTONS ── */
+.btn {
+  padding: 9px 18px; border-radius: var(--radius-sm);
+  font-size: 13px; font-weight: 600; font-family: inherit;
+  cursor: pointer; transition: all 0.15s; border: none;
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.btn-tt { background: var(--tt); color: #fff; }
+.btn-tt:hover { opacity: 0.88; }
+.btn-purple { background: var(--accent); color: #fff; }
+.btn-purple:hover { opacity: 0.88; }
+.btn-ghost {
+  background: var(--surface-2); color: var(--text-sec);
+  border: 0.5px solid var(--border-2);
+}
+.btn-ghost:hover { color: var(--text); border-color: var(--border-2); background: var(--surface-3); }
+.btn-sm { padding: 5px 12px; font-size: 12px; }
+.btn-full { width: 100%; justify-content: center; margin-top: 10px; }
 
-  /* TIKTOK */
-  .tiktok-kw { display: flex; align-items: center; gap: 10px; padding: 9px 0; border-bottom: 0.5px solid var(--border); }
-  .tiktok-kw:last-child { border-bottom: none; }
-  .fire { color: #ec835a; }
-  .caption-box { margin-top: 12px; padding: 12px 14px; background: var(--accent-bg); border-radius: var(--radius); border: 0.5px dashed var(--accent); }
-  .caption-box .cap-label { font-size: 11px; font-weight: 700; color: var(--accent-text); margin-bottom: 6px; text-transform: uppercase; letter-spacing: .05em; }
-  .caption-box .cap-text { font-size: 13px; color: var(--text); line-height: 1.6; }
+/* ── KW ROWS ── */
+.kw-row {
+  display: flex; align-items: center; gap: 10px;
+  padding: 9px 0; border-bottom: 0.5px solid var(--border);
+}
+.kw-row:last-child { border-bottom: none; }
+.kw-name { flex: 1; font-size: 13px; color: var(--text); font-weight: 500; }
+.kw-vol { font-size: 12px; color: var(--text-sec); min-width: 56px; text-align: right; }
+.bar-wrap { flex: 1; height: 4px; background: var(--surface-3); border-radius: 2px; overflow: hidden; min-width: 60px; }
+.bar-fill { height: 100%; border-radius: 2px; }
 
-  /* QUICK ACTIONS */
-  .quick-action { display: flex; align-items: center; gap: 12px; padding: 12px; border-radius: var(--radius); border: 0.5px solid var(--border); background: var(--surface-alt); cursor: pointer; transition: border-color 0.15s, background 0.15s; text-decoration: none; }
-  .quick-action:hover { border-color: var(--accent); background: var(--accent-bg); }
-  .quick-action i { font-size: 22px; color: var(--accent); }
-  .quick-action .qa-title { font-size: 13px; font-weight: 600; color: var(--text); }
-  .quick-action .qa-sub { font-size: 11px; color: var(--text-muted); }
+/* ── SCORE RING ── */
+.score-ring {
+  width: 64px; height: 64px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; font-weight: 700;
+  border: 3px solid; flex-shrink: 0;
+}
+.char-count { font-size: 11px; color: var(--text-muted); text-align: right; margin-top: 4px; }
 
-  /* CHECKLIST */
-  .check-item { display: flex; align-items: center; gap: 8px; padding: 8px 0; border-bottom: 0.5px solid var(--border); font-size: 13px; }
-  .check-item:last-child { border-bottom: none; }
-  .check-item i { font-size: 17px; }
+/* ── CHECKLIST ── */
+.check-item {
+  display: flex; align-items: center; gap: 8px;
+  padding: 8px 0; border-bottom: 0.5px solid var(--border);
+  font-size: 13px;
+}
+.check-item:last-child { border-bottom: none; }
+.check-item i { font-size: 16px; }
 
-  /* TT TEMPLATE ROWS */
-  .tt-tpl { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: var(--radius); border: 0.5px solid var(--border); margin-bottom: 6px; font-size: 13px; color: var(--text); background: var(--surface-alt); cursor: pointer; transition: border-color 0.15s; }
-  .tt-tpl:hover { border-color: var(--accent); background: var(--accent-bg); }
-  .tt-tpl .tpl-num { font-size: 11px; font-weight: 600; color: var(--text-muted); min-width: 20px; }
-  .tt-tpl i { font-size: 14px; color: var(--text-muted); flex-shrink: 0; }
+/* ── TIKTOK PREVIEW ── */
+.tt-preview {
+  background: #111; border-radius: 10px;
+  padding: 14px 16px; margin-bottom: 12px;
+}
+.tt-preview .ttp-title { color: #fff; font-size: 14px; font-weight: 600; margin-bottom: 5px; }
+.tt-preview .ttp-meta { color: #888; font-size: 12px; margin-bottom: 5px; }
+.tt-preview .ttp-tags { color: #fe2c55; font-size: 13px; font-weight: 500; }
 
-  /* FOOTER */
-  .footer { text-align: center; padding: 32px 0 16px; font-size: 12px; color: var(--text-muted); }
-  .footer a { color: var(--accent-text); text-decoration: none; }
+/* ── GOOGLE PREVIEW ── */
+.goog-preview {
+  background: var(--surface-2); border: 0.5px solid var(--border);
+  border-radius: var(--radius-sm); padding: 12px 14px; margin-bottom: 12px;
+}
+.goog-preview .gp-title { font-size: 15px; color: #8ab4f8; margin-bottom: 2px; }
+.goog-preview .gp-url { font-size: 12px; color: #3ac376; margin-bottom: 3px; }
+.goog-preview .gp-desc { font-size: 12px; color: var(--text-sec); }
 
-  /* COPY BUTTON */
-  .copy-btn { background: transparent; border: 0.5px solid var(--border-strong); border-radius: var(--radius); padding: 4px 10px; font-size: 11px; font-weight: 600; color: var(--text-sec); cursor: pointer; font-family: inherit; margin-left: 8px; transition: all 0.15s; }
-  .copy-btn:hover { background: var(--accent-bg); color: var(--accent-text); border-color: var(--accent); }
+/* ── CHIP ── */
+.chip {
+  background: var(--surface-2); border: 0.5px solid var(--border-2);
+  border-radius: var(--radius-sm); padding: 5px 10px;
+  font-size: 12px; cursor: pointer; color: var(--text-sec); font-weight: 500;
+  transition: all 0.15s; font-family: inherit;
+}
+.chip:hover { border-color: var(--tt); color: var(--tt); background: var(--tt-bg); }
+.chip-wrap { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
 
-  /* SCROLLBAR */
-  ::-webkit-scrollbar { width: 6px; height: 6px; }
-  ::-webkit-scrollbar-track { background: transparent; }
-  ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 3px; }
+/* ── COMPETITOR TABLE ── */
+.comp-grid {
+  display: grid;
+  grid-template-columns: 1fr repeat(4,80px);
+  gap: 8px; align-items: center;
+  padding: 9px 0; border-bottom: 0.5px solid var(--border);
+  font-size: 13px;
+}
+.comp-grid:last-child { border-bottom: none; }
+.comp-head { font-size: 11px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: .04em; }
+.dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; margin-right: 4px; }
+@media (max-width: 700px) { .comp-grid { grid-template-columns: 1fr repeat(4,56px); font-size: 12px; } }
+
+/* ── HASHTAG ROW ── */
+.htag-row {
+  display: flex; align-items: center; gap: 10px;
+  padding: 9px 0; border-bottom: 0.5px solid var(--border);
+}
+.htag-row:last-child { border-bottom: none; }
+
+/* ── CAPTION BOX ── */
+.caption-box {
+  margin-top: 14px; padding: 12px 14px;
+  background: rgba(254,44,85,0.06); border-radius: var(--radius-sm);
+  border: 0.5px dashed rgba(254,44,85,0.35);
+}
+.caption-box .cap-label { font-size: 11px; font-weight: 700; color: var(--tt); margin-bottom: 6px; text-transform: uppercase; letter-spacing: .05em; display: flex; align-items: center; justify-content: space-between; }
+.caption-box .cap-text { font-size: 13px; color: var(--text-sec); line-height: 1.7; }
+
+/* ── TEMPLATE ROW ── */
+.tpl-row {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 12px; border-radius: var(--radius-sm);
+  border: 0.5px solid var(--border); margin-bottom: 6px;
+  font-size: 13px; color: var(--text);
+  background: var(--surface-2); cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+.tpl-row:hover { border-color: var(--tt); background: var(--tt-bg); }
+.tpl-num { font-size: 11px; font-weight: 600; color: var(--text-muted); min-width: 20px; }
+
+/* ── AI AREA ── */
+.ai-output {
+  background: var(--surface-2);
+  border: 0.5px solid var(--border-2);
+  border-radius: var(--radius);
+  padding: 16px;
+  font-size: 13px;
+  color: var(--text-sec);
+  line-height: 1.75;
+  min-height: 80px;
+  white-space: pre-wrap;
+  position: relative;
+}
+.ai-output .ai-empty { color: var(--text-muted); font-style: italic; }
+.ai-label {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 11px; font-weight: 600; color: var(--tt);
+  text-transform: uppercase; letter-spacing: .06em;
+  margin-bottom: 8px;
+}
+.ai-label i { font-size: 14px; }
+.ai-loader { display: none; }
+.ai-loader.active { display: flex; align-items: center; gap: 8px; color: var(--text-muted); font-size: 13px; }
+.spinner {
+  width: 16px; height: 16px; border-radius: 50%;
+  border: 2px solid var(--border-2);
+  border-top-color: var(--tt);
+  animation: spin 0.8s linear infinite;
+  flex-shrink: 0;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── AUDIT ITEMS ── */
+.audit-item {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 12px 0; border-bottom: 0.5px solid var(--border);
+}
+.audit-item:last-child { border-bottom: none; }
+.audit-icon { width: 30px; height: 30px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 15px; flex-shrink: 0; }
+.audit-body { flex: 1; }
+.audit-title { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 2px; }
+.audit-desc { font-size: 12px; color: var(--text-sec); line-height: 1.6; }
+.audit-fix { font-size: 11px; font-weight: 600; color: var(--tt); margin-top: 4px; cursor: pointer; }
+
+/* ── QUICK ACTIONS ── */
+.qa {
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px; border-radius: var(--radius-sm);
+  border: 0.5px solid var(--border); background: var(--surface-2);
+  cursor: pointer; transition: all 0.15s;
+}
+.qa:hover { border-color: var(--tt); background: var(--tt-bg); }
+.qa i { font-size: 20px; color: var(--tt); }
+.qa-title { font-size: 13px; font-weight: 600; color: var(--text); }
+.qa-sub { font-size: 11px; color: var(--text-muted); margin-top: 1px; }
+
+/* ── IDEATION CARDS ── */
+.idea-card {
+  background: var(--surface-2); border: 0.5px solid var(--border);
+  border-radius: var(--radius); padding: 14px; cursor: pointer;
+  transition: border-color 0.15s;
+}
+.idea-card:hover { border-color: var(--accent); }
+.idea-card .idea-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 6px; }
+.idea-card .idea-text { font-size: 13px; color: var(--text); line-height: 1.5; }
+.idea-card .idea-tags { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 4px; }
+
+/* ── SECTION DIVIDER ── */
+.divider { height: 0.5px; background: var(--border); margin: 20px 0; }
+
+/* ── COPY BTN ── */
+.copy-btn {
+  background: transparent; border: 0.5px solid var(--border-2);
+  border-radius: var(--radius-sm); padding: 3px 9px;
+  font-size: 11px; font-weight: 600; color: var(--text-sec);
+  cursor: pointer; font-family: inherit; transition: all 0.15s;
+}
+.copy-btn:hover { background: var(--tt-bg); color: var(--tt); border-color: rgba(254,44,85,0.3); }
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--surface-3); border-radius: 3px; }
+
+/* ── RANK DOT ── */
+.rank-dot {
+  font-size: 13px; font-weight: 700; text-align: center;
+}
 </style>
 </head>
 <body>
 
-<header class="site-header">
-  <a class="logo" href="#">
-    <div class="logo-dot">A</div>
-    Archies SEO Optimizer
-  </a>
-  <div class="header-meta">
-    <span class="us-badge">🇺🇸 US Market</span>
-    <span>TikTok Shop + Google</span>
+<header class="header">
+  <div class="logo">
+    <div class="logo-icon"><i class="ti ti-brand-tiktok" style="font-size:16px"></i></div>
+    TikTok Shop SEO Studio
+  </div>
+  <div class="header-right">
+    <span class="market-badge">🇺🇸 US Market</span>
   </div>
 </header>
 
 <div class="app">
+
   <div class="tabs">
     <button class="tab active" onclick="showTab('dashboard')"><i class="ti ti-layout-dashboard"></i> Dashboard</button>
-    <button class="tab" onclick="showTab('keywords')"><i class="ti ti-search"></i> Keyword Research</button>
+    <button class="tab" onclick="showTab('keywords')"><i class="ti ti-search"></i> Keywords</button>
     <button class="tab" onclick="showTab('listing')"><i class="ti ti-pencil"></i> Listing Optimizer</button>
-    <button class="tab" onclick="showTab('competitors')"><i class="ti ti-chart-bar"></i> Competitor Gap</button>
+    <button class="tab" onclick="showTab('competitors')"><i class="ti ti-trophy"></i> Competitor Gap</button>
     <button class="tab" onclick="showTab('tiktok')"><i class="ti ti-brand-tiktok"></i> TikTok Shop</button>
+    <button class="tab" onclick="showTab('audit')"><i class="ti ti-checklist"></i> SEO Audit</button>
+    <button class="tab" onclick="showTab('ideation')"><i class="ti ti-bulb"></i> Ideation</button>
+    <button class="tab" onclick="showTab('ai')"><i class="ti ti-sparkles"></i> AI Assistant</button>
   </div>
 
-  <!-- ===== DASHBOARD ===== -->
+  <!-- ════════════════════════════════════
+       DASHBOARD
+  ════════════════════════════════════ -->
   <div id="tab-dashboard" class="panel active">
-    <div class="grid4">
-      <div class="metric-card">
+    <div class="g4">
+      <div class="metric">
         <div class="metric-label">Keyword Coverage</div>
-        <div class="metric-val">68<span>%</span></div>
-        <div class="metric-delta up"><i class="ti ti-arrow-up"></i> +4% vs last month</div>
+        <div class="metric-val" id="d-coverage">—<span>%</span></div>
+        <div class="metric-sub up"><i class="ti ti-arrow-up"></i> Enter your niche below</div>
       </div>
-      <div class="metric-card">
-        <div class="metric-label">Avg Search Volume</div>
-        <div class="metric-val">16.4<span>K</span></div>
-        <div class="metric-delta up"><i class="ti ti-arrow-up"></i> US-targeted keywords</div>
+      <div class="metric">
+        <div class="metric-label">Avg Search Vol</div>
+        <div class="metric-val" id="d-vol">—</div>
+        <div class="metric-sub">Tracked keywords</div>
       </div>
-      <div class="metric-card">
+      <div class="metric">
         <div class="metric-label">TikTok Shop Rank</div>
-        <div class="metric-val">#3</div>
-        <div class="metric-delta" style="color:var(--text-muted)">Arch support sandals (US)</div>
+        <div class="metric-val" id="d-rank" style="color:var(--tt)">—</div>
+        <div class="metric-sub">Primary keyword</div>
       </div>
-      <div class="metric-card">
+      <div class="metric">
         <div class="metric-label">Listing Score</div>
-        <div class="metric-val" id="dash-score">74<span>/100</span></div>
-        <div class="metric-delta dn"><i class="ti ti-alert-circle"></i> 3 issues flagged</div>
+        <div class="metric-val" id="d-score">—<span>/100</span></div>
+        <div class="metric-sub dn">Optimize your listing</div>
       </div>
     </div>
 
-    <div class="grid2">
+    <!-- Niche setup -->
+    <div class="card" style="margin-bottom:16px">
+      <h3>⚡ Quick Setup — Enter Your Niche</h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr auto;gap:10px;align-items:flex-end">
+        <div>
+          <div class="label" style="margin-bottom:6px">Your Product / Niche</div>
+          <input id="setup-product" placeholder="e.g. handmade candles, protein powder…">
+        </div>
+        <div>
+          <div class="label" style="margin-bottom:6px">Your Brand Name</div>
+          <input id="setup-brand" placeholder="e.g. GlowCo, PureNutrition…">
+        </div>
+        <button class="btn btn-tt" onclick="setupNiche()"><i class="ti ti-bolt"></i> Load Tool</button>
+      </div>
+    </div>
+
+    <div class="g2">
       <div class="card">
-        <div class="section-label">Top US Keywords</div>
-        <div id="dash-kws"></div>
+        <div class="label">Top Keywords</div>
+        <div id="dash-kws"><div style="color:var(--text-muted);font-size:13px;padding:8px 0">Set your niche above to populate.</div></div>
       </div>
       <div class="card">
-        <div class="section-label">TikTok Shop US Trending</div>
-        <div id="dash-tiktok"></div>
+        <div class="label">TikTok Trending Tags</div>
+        <div id="dash-tiktok"><div style="color:var(--text-muted);font-size:13px;padding:8px 0">Set your niche above to populate.</div></div>
       </div>
     </div>
 
     <div class="card">
-      <div class="section-label">Quick Actions</div>
-      <div class="grid3" style="margin-bottom:0">
-        <div class="quick-action" onclick="showTab('listing')">
+      <div class="label">Quick Actions</div>
+      <div class="g3" style="margin-bottom:0">
+        <div class="qa" onclick="showTab('listing')">
           <i class="ti ti-pencil"></i>
-          <div><div class="qa-title">Optimize listing title</div><div class="qa-sub">Score and improve your product name</div></div>
+          <div><div class="qa-title">Optimize your listing</div><div class="qa-sub">Score and improve your product title</div></div>
         </div>
-        <div class="quick-action" onclick="showTab('keywords')">
+        <div class="qa" onclick="showTab('keywords')">
           <i class="ti ti-search"></i>
-          <div><div class="qa-title">Find new US keywords</div><div class="qa-sub">Expand your keyword coverage</div></div>
+          <div><div class="qa-title">Keyword research</div><div class="qa-sub">Find high-volume, low-comp keywords</div></div>
         </div>
-        <div class="quick-action" onclick="showTab('tiktok')">
+        <div class="qa" onclick="showTab('tiktok')">
           <i class="ti ti-brand-tiktok"></i>
-          <div><div class="qa-title">TikTok Shop optimizer</div><div class="qa-sub">Rank higher in US TikTok Search</div></div>
+          <div><div class="qa-title">TikTok Shop strategy</div><div class="qa-sub">Hashtags, captions & ranking tips</div></div>
+        </div>
+        <div class="qa" onclick="showTab('competitors')">
+          <i class="ti ti-trophy"></i>
+          <div><div class="qa-title">Competitor gap analysis</div><div class="qa-sub">Find where rivals rank but you don't</div></div>
+        </div>
+        <div class="qa" onclick="showTab('audit')">
+          <i class="ti ti-checklist"></i>
+          <div><div class="qa-title">Run SEO audit</div><div class="qa-sub">Spot issues across your listings</div></div>
+        </div>
+        <div class="qa" onclick="showTab('ideation')">
+          <i class="ti ti-bulb"></i>
+          <div><div class="qa-title">Content ideation</div><div class="qa-sub">Video ideas, hooks & trending angles</div></div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ===== KEYWORDS ===== -->
+  <!-- ════════════════════════════════════
+       KEYWORDS
+  ════════════════════════════════════ -->
   <div id="tab-keywords" class="panel">
     <div class="card" style="margin-bottom:16px">
-      <div class="section-label">Filter by Intent</div>
-      <div class="pill-row" id="intent-pills">
-        <span class="pill on" onclick="togglePill(this,'all')">All</span>
-        <span class="pill" onclick="togglePill(this,'health')">Health &amp; Comfort</span>
-        <span class="pill" onclick="togglePill(this,'style')">Style &amp; Fashion</span>
-        <span class="pill" onclick="togglePill(this,'occasion')">Occasion</span>
-        <span class="pill" onclick="togglePill(this,'comparison')">Competitor</span>
-        <span class="pill" onclick="togglePill(this,'tiktok')">TikTok Signals</span>
-      </div>
+      <h3>Keyword Research</h3>
       <div class="input-row">
-        <input type="text" id="kw-search" placeholder="Search or filter keywords..." oninput="filterKeywords()">
+        <input id="kw-seed" placeholder="Seed keyword (e.g. 'yoga mat', 'face serum')…">
+        <button class="btn btn-tt" onclick="generateKeywords()"><i class="ti ti-sparkles"></i> AI Generate</button>
+      </div>
+      <div class="pills" id="intent-pills">
+        <span class="pill on" onclick="togglePill(this,'all')">All</span>
+        <span class="pill" onclick="togglePill(this,'buyer')">Buyer Intent</span>
+        <span class="pill" onclick="togglePill(this,'discovery')">Discovery</span>
+        <span class="pill" onclick="togglePill(this,'comparison')">Comparison</span>
+        <span class="pill" onclick="togglePill(this,'tiktok')">TikTok Signals</span>
+        <span class="pill" onclick="togglePill(this,'trend')">Trending</span>
+      </div>
+      <div class="input-row" style="margin-bottom:0">
+        <input id="kw-filter" placeholder="Filter keywords…" oninput="filterKeywords()">
       </div>
     </div>
 
     <div class="card">
-      <div style="display:grid;grid-template-columns:1fr 80px 70px 130px 110px;gap:8px;padding-bottom:10px;border-bottom:0.5px solid var(--border)">
+      <div style="display:grid;grid-template-columns:1fr 80px 60px 150px 100px;gap:8px;padding-bottom:10px;border-bottom:0.5px solid var(--border)">
         <div class="comp-head">Keyword</div>
         <div class="comp-head" style="text-align:right">Vol/mo</div>
-        <div class="comp-head" style="text-align:right">Difficulty</div>
+        <div class="comp-head" style="text-align:right">Diff</div>
         <div class="comp-head" style="text-align:center">Platform</div>
         <div class="comp-head" style="text-align:center">Intent</div>
       </div>
-      <div id="kw-list"></div>
+      <div id="kw-list"><div style="color:var(--text-muted);font-size:13px;padding:20px 0 8px;text-align:center">Enter a seed keyword above to generate ideas.</div></div>
+    </div>
+
+    <div id="kw-ai-section" style="display:none;margin-top:16px">
+      <div class="card">
+        <div class="ai-label"><i class="ti ti-sparkles"></i> AI Keyword Insights</div>
+        <div class="ai-loader" id="kw-loader"><div class="spinner"></div> Analysing keyword opportunities…</div>
+        <div class="ai-output" id="kw-ai-out"><span class="ai-empty">AI insights will appear here after generation.</span></div>
+      </div>
     </div>
   </div>
 
-  <!-- ===== LISTING OPTIMIZER ===== -->
+  <!-- ════════════════════════════════════
+       LISTING OPTIMIZER
+  ════════════════════════════════════ -->
   <div id="tab-listing" class="panel">
-    <div class="grid2">
+    <div class="g2">
       <div>
         <div class="card" style="margin-bottom:16px">
           <h3>Product Title Builder</h3>
-          <div class="section-label">Current or draft title</div>
-          <textarea id="listing-title" class="listing-textarea" placeholder="Paste or type your product listing title here..." oninput="scoreListing()">Archies Arch Support Flip Flops Thongs</textarea>
-          <div class="char-count" id="char-count">38 / 80 chars</div>
-          <div class="score-block">
-            <div class="score-ring" id="score-ring">74</div>
+          <div class="label">Product category</div>
+          <input id="listing-category" placeholder="e.g. skincare, apparel, supplements…" style="margin-bottom:10px" oninput="updateListingChips()">
+          <div class="label">Listing title</div>
+          <textarea id="listing-title" placeholder="Paste or type your TikTok Shop product title…" oninput="scoreListing()"></textarea>
+          <div class="char-count" id="char-count">0 / 80 chars</div>
+          <div style="display:flex;align-items:center;gap:14px;margin:14px 0">
+            <div class="score-ring" id="score-ring" style="color:var(--text-muted);border-color:var(--border-2)">—</div>
             <div>
-              <div style="font-size:14px;font-weight:600;color:var(--text)" id="score-label">Good — room to improve</div>
-              <div style="font-size:12px;color:var(--text-muted)" id="score-sublabel">Add benefit keywords &amp; TikTok signals</div>
+              <div style="font-size:14px;font-weight:600;color:var(--text)" id="score-label">Enter a title to score it</div>
+              <div style="font-size:12px;color:var(--text-muted)" id="score-sublabel">Score updates as you type</div>
             </div>
           </div>
         </div>
+
         <div class="card">
-          <h3>Suggested US Keywords</h3>
-          <div class="section-label" style="margin-bottom:8px">Click to insert into title</div>
-          <div class="tag-wrap" id="suggest-chips"></div>
+          <h3>Suggested Keywords</h3>
+          <div class="label" style="margin-bottom:6px">Click to insert into title</div>
+          <div class="chip-wrap" id="suggest-chips">
+            <div style="color:var(--text-muted);font-size:12px">Set your category above to see suggestions.</div>
+          </div>
+          <div style="margin-top:14px">
+            <div class="label">AI title suggestions</div>
+            <div class="ai-loader" id="title-loader"><div class="spinner"></div> Generating title ideas…</div>
+            <div id="title-suggestions"></div>
+            <button class="btn btn-ghost btn-sm btn-full" onclick="generateTitleSuggestions()" style="margin-top:10px"><i class="ti ti-sparkles"></i> Generate AI Title Ideas</button>
+          </div>
         </div>
       </div>
 
       <div>
         <div class="card" style="margin-bottom:16px">
-          <h3>Live Listing Previews</h3>
-          <div class="section-label">Google Shopping (US)</div>
-          <div class="google-preview">
-            <div class="gp-title" id="gp-title">Archies Arch Support Flip Flops Thongs — Women's Comfort Sandals</div>
-            <div class="gp-url">www.archiesfootwear.com</div>
-            <div class="gp-desc">$39.95 · In stock · Free shipping · Ships from US</div>
+          <h3>Live Previews</h3>
+          <div class="label">Google Shopping</div>
+          <div class="goog-preview">
+            <div class="gp-title" id="gp-title">Your product title will appear here</div>
+            <div class="gp-url" id="gp-url">yourshop.com</div>
+            <div class="gp-desc">$—.— · In stock · Free shipping · Ships from US</div>
           </div>
-          <div class="section-label">TikTok Shop (US)</div>
-          <div class="tiktok-preview">
-            <div class="tt-title" id="tt-title">Archies Arch Support Flip Flops | Podiatrist-Approved 🦶</div>
-            <div class="tt-meta">Archies Footwear US · ⭐ 4.9 (2,341 sold)</div>
-            <div class="tt-tags" id="tt-tags">#archsupport #comfysandals #foothealth</div>
+          <div class="label">TikTok Shop</div>
+          <div class="tt-preview">
+            <div class="ttp-title" id="tt-title">Your product title will appear here</div>
+            <div class="ttp-meta" id="tt-meta">Your Shop · ⭐ 4.8 (—)</div>
+            <div class="ttp-tags" id="tt-tags">#tiktokshop #fyp</div>
           </div>
         </div>
+
         <div class="card">
           <h3>Title Checklist</h3>
-          <div id="checklist"></div>
+          <div id="checklist">
+            <div style="color:var(--text-muted);font-size:13px;padding:8px 0">Enter a title to see your checklist.</div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <div class="ai-label"><i class="ti ti-sparkles"></i> AI Optimisation Advice</div>
+          <div class="ai-loader" id="listing-loader"><div class="spinner"></div> Analysing listing…</div>
+          <div class="ai-output" id="listing-ai-out"><span class="ai-empty">Click Analyse with AI to get personalised advice.</span></div>
+          <button class="btn btn-tt btn-full" onclick="analyseListingAI()" style="margin-top:10px"><i class="ti ti-sparkles"></i> Analyse with AI</button>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ===== COMPETITORS ===== -->
+  <!-- ════════════════════════════════════
+       COMPETITOR GAP
+  ════════════════════════════════════ -->
   <div id="tab-competitors" class="panel">
     <div class="card" style="margin-bottom:16px">
-      <div class="section-label">Keyword Rank Comparison — US Market</div>
-      <div class="comp-head-row">
+      <h3>Competitor Setup</h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr auto;gap:8px;align-items:flex-end">
+        <div>
+          <div class="label" style="margin-bottom:6px">Your brand</div>
+          <input id="comp-you" placeholder="YourBrand">
+        </div>
+        <div>
+          <div class="label" style="margin-bottom:6px">Competitor 1</div>
+          <input id="comp-c1" placeholder="Competitor A">
+        </div>
+        <div>
+          <div class="label" style="margin-bottom:6px">Competitor 2</div>
+          <input id="comp-c2" placeholder="Competitor B">
+        </div>
+        <div>
+          <div class="label" style="margin-bottom:6px">Competitor 3</div>
+          <input id="comp-c3" placeholder="Competitor C">
+        </div>
+        <button class="btn btn-tt" onclick="renderCompTable()"><i class="ti ti-refresh"></i> Update</button>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:16px">
+      <div class="label">Keyword Rank Comparison — US TikTok Shop + Google</div>
+      <div class="comp-grid" style="padding-bottom:10px;border-bottom:0.5px solid var(--border-2)">
         <div class="comp-head">Keyword</div>
-        <div class="comp-head" style="text-align:center"><span class="dot" style="background:#2a78d6"></span>Archies</div>
-        <div class="comp-head" style="text-align:center"><span class="dot" style="background:#1baf7a"></span>Havaianas</div>
-        <div class="comp-head" style="text-align:center"><span class="dot" style="background:#eda100"></span>Crocs</div>
-        <div class="comp-head" style="text-align:center"><span class="dot" style="background:#e34948"></span>HeyDude</div>
+        <div class="comp-head" style="text-align:center"><span class="dot" style="background:#fe2c55"></span><span id="ch-you">You</span></div>
+        <div class="comp-head" style="text-align:center"><span class="dot" style="background:#22c98e"></span><span id="ch-c1">Comp A</span></div>
+        <div class="comp-head" style="text-align:center"><span class="dot" style="background:#f5a623"></span><span id="ch-c2">Comp B</span></div>
+        <div class="comp-head" style="text-align:center"><span class="dot" style="background:#b09eff"></span><span id="ch-c3">Comp C</span></div>
       </div>
       <div id="comp-table"></div>
     </div>
 
-    <div class="grid2">
+    <div class="g2">
       <div class="card">
-        <h3>Archies US Strengths</h3>
-        <p style="font-size:13px;color:var(--text-sec);margin-bottom:12px;line-height:1.6">Keywords where Archies outranks all US competitors — double down here.</p>
-        <div id="archies-wins"></div>
+        <h3>Your Strengths <span class="badge b-green" style="margin-left:4px" id="wins-count">0</span></h3>
+        <p style="font-size:13px;color:var(--text-sec);margin-bottom:12px;line-height:1.6">Keywords where you outrank all competitors.</p>
+        <div id="comp-wins"><div style="color:var(--text-muted);font-size:13px">Update competitor info above.</div></div>
       </div>
       <div class="card">
-        <h3>US Market Gaps to Capture</h3>
-        <p style="font-size:13px;color:var(--text-sec);margin-bottom:12px;line-height:1.6">High-volume US keywords where competitors rank but Archies doesn't yet.</p>
-        <div id="gap-opps"></div>
-        <button class="btn-outline" onclick="alert('Tip: Use the Listing Optimizer tab to build titles targeting these gap keywords, then paste into your Google Shopping and TikTok Shop listings.')">
-          How to target these gaps →
-        </button>
+        <h3>Gap Opportunities <span class="badge b-red" style="margin-left:4px" id="gaps-count">0</span></h3>
+        <p style="font-size:13px;color:var(--text-sec);margin-bottom:12px;line-height:1.6">High-vol keywords where competitors rank but you don't (yet).</p>
+        <div id="comp-gaps"><div style="color:var(--text-muted);font-size:13px">Update competitor info above.</div></div>
       </div>
+    </div>
+
+    <div class="card" style="margin-top:0">
+      <div class="ai-label"><i class="ti ti-sparkles"></i> AI Gap Analysis</div>
+      <div class="ai-loader" id="gap-loader"><div class="spinner"></div> Analysing competitive gaps…</div>
+      <div class="ai-output" id="gap-ai-out"><span class="ai-empty">Click below to generate an AI-powered competitive gap report.</span></div>
+      <button class="btn btn-tt btn-full" onclick="runGapAI()" style="margin-top:10px"><i class="ti ti-sparkles"></i> Generate Gap Report</button>
     </div>
   </div>
 
-  <!-- ===== TIKTOK SHOP ===== -->
+  <!-- ════════════════════════════════════
+       TIKTOK SHOP
+  ════════════════════════════════════ -->
   <div id="tab-tiktok" class="panel">
-    <div class="grid3" style="margin-bottom:20px">
-      <div class="metric-card">
+    <div class="g3">
+      <div class="metric">
         <div class="metric-label">TikTok Shop US Rank</div>
-        <div class="metric-val" style="color:var(--purple)">#3</div>
-        <div class="metric-delta">"arch support sandals" · US</div>
+        <div class="metric-val" id="tt-rank" style="color:var(--tt)">—</div>
+        <div class="metric-sub">Primary keyword</div>
       </div>
-      <div class="metric-card">
-        <div class="metric-label">Total Hashtag Reach</div>
-        <div class="metric-val">3.4<span>B</span></div>
-        <div class="metric-delta up">Combined US tag views</div>
+      <div class="metric">
+        <div class="metric-label">Hashtag Reach</div>
+        <div class="metric-val" id="tt-reach">—</div>
+        <div class="metric-sub up">Combined tag views</div>
       </div>
-      <div class="metric-card">
+      <div class="metric">
         <div class="metric-label">Unused Viral Tags</div>
-        <div class="metric-val">6</div>
-        <div class="metric-delta dn">Opportunity gaps</div>
+        <div class="metric-val" id="tt-unused">—</div>
+        <div class="metric-sub dn">Opportunity gaps</div>
       </div>
     </div>
 
-    <div class="grid2">
+    <div class="g2">
       <div class="card">
-        <h3>TikTok Shop US Keyword Stack</h3>
-        <div class="section-label">Ranked by US conversion potential</div>
-        <div id="tiktok-kws"></div>
+        <h3>TikTok Shop Keyword Stack</h3>
+        <div class="label">Ranked by conversion potential</div>
+        <div id="tiktok-kws"><div style="color:var(--text-muted);font-size:13px;padding:8px 0">Set up your niche on the Dashboard tab.</div></div>
+        <button class="btn btn-ghost btn-full" onclick="generateTikTokKws()" style="margin-top:10px"><i class="ti ti-sparkles"></i> AI Generate Keyword Stack</button>
       </div>
       <div class="card">
         <h3>Hashtag Strategy Builder</h3>
-        <div class="section-label">Filter by tier</div>
-        <div class="pill-row" id="hashtag-pills">
+        <div class="pills" id="hashtag-pills">
           <span class="pill on" onclick="setHashtagTier(this,'all')">All tiers</span>
           <span class="pill" onclick="setHashtagTier(this,'mega')">Mega (1B+)</span>
           <span class="pill" onclick="setHashtagTier(this,'macro')">Macro (100M+)</span>
           <span class="pill" onclick="setHashtagTier(this,'niche')">Niche (&lt;100M)</span>
         </div>
-        <div id="hashtag-list"></div>
-        <div class="caption-box">
-          <div class="cap-label">Recommended US Caption Stack <button class="copy-btn" onclick="copyCaption()">Copy</button></div>
-          <div class="cap-text" id="caption-stack">#archsupport #comfysandals #foothealth #podiatristrecommended #sandals #summerfootwear #archiesfootwear #USshopping</div>
+        <div id="hashtag-list"><div style="color:var(--text-muted);font-size:13px;padding:8px 0">Generate your keyword stack first.</div></div>
+        <div class="caption-box" id="caption-block" style="display:none">
+          <div class="cap-label">Caption Stack <button class="copy-btn" onclick="copyCaption()">Copy</button></div>
+          <div class="cap-text" id="caption-stack"></div>
         </div>
       </div>
     </div>
 
-    <div class="card" style="margin-top:16px">
-      <h3>TikTok Shop US Listing Title Templates</h3>
-      <div class="section-label">Click any template to load it into the Listing Optimizer</div>
-      <div id="tt-templates"></div>
+    <div class="card" style="margin-top:0">
+      <h3>TikTok Shop Listing Title Templates</h3>
+      <div class="label">Click any template to load into the Listing Optimizer</div>
+      <div id="tt-templates"><div style="color:var(--text-muted);font-size:13px;padding:8px 0">Set your niche on the Dashboard first.</div></div>
+      <button class="btn btn-ghost btn-full" onclick="generateTTTemplates()" style="margin-top:10px"><i class="ti ti-sparkles"></i> Generate AI Templates</button>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════
+       SEO AUDIT
+  ════════════════════════════════════ -->
+  <div id="tab-audit" class="panel">
+    <div class="card" style="margin-bottom:16px">
+      <h3>SEO Audit Setup</h3>
+      <div class="g2" style="margin-bottom:0">
+        <div>
+          <div class="label" style="margin-bottom:6px">Product listing URL or title</div>
+          <textarea id="audit-title" placeholder="Paste your full product listing title or URL to audit…" style="min-height:70px"></textarea>
+        </div>
+        <div>
+          <div class="label" style="margin-bottom:6px">Product description (optional)</div>
+          <textarea id="audit-desc" placeholder="Paste your product description for a deeper audit…" style="min-height:70px"></textarea>
+        </div>
+      </div>
+      <button class="btn btn-tt" onclick="runAudit()" style="margin-top:10px"><i class="ti ti-checklist"></i> Run Full SEO Audit</button>
+    </div>
+
+    <div id="audit-results" style="display:none">
+      <div class="g4" style="margin-bottom:16px">
+        <div class="metric">
+          <div class="metric-label">Overall Score</div>
+          <div class="metric-val" id="audit-score">—<span>/100</span></div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">Issues Found</div>
+          <div class="metric-val" id="audit-issues" style="color:var(--red)">—</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">Opportunities</div>
+          <div class="metric-val" id="audit-opps" style="color:var(--yellow)">—</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">Passing Checks</div>
+          <div class="metric-val" id="audit-pass" style="color:var(--green)">—</div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom:16px">
+        <h3>Audit Results</h3>
+        <div id="audit-list"></div>
+      </div>
+
+      <div class="card">
+        <div class="ai-label"><i class="ti ti-sparkles"></i> AI Audit Report & Action Plan</div>
+        <div class="ai-loader" id="audit-loader"><div class="spinner"></div> Generating audit report…</div>
+        <div class="ai-output" id="audit-ai-out"><span class="ai-empty">AI report will appear here.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════
+       IDEATION
+  ════════════════════════════════════ -->
+  <div id="tab-ideation" class="panel">
+    <div class="card" style="margin-bottom:16px">
+      <h3>Content & Video Ideation</h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr auto;gap:10px;align-items:flex-end">
+        <div>
+          <div class="label" style="margin-bottom:6px">Product / Niche</div>
+          <input id="idea-product" placeholder="e.g. matcha powder, gym leggings…">
+        </div>
+        <div>
+          <div class="label" style="margin-bottom:6px">Idea type</div>
+          <select id="idea-type" style="width:100%;border-radius:var(--radius-sm)">
+            <option value="video">TikTok Video Hooks</option>
+            <option value="caption">Caption Templates</option>
+            <option value="keyword">Keyword Angles</option>
+            <option value="trend">Trend Hijacking</option>
+            <option value="collab">Creator Collab Pitches</option>
+            <option value="challenge">Challenge Concepts</option>
+          </select>
+        </div>
+        <button class="btn btn-tt" onclick="generateIdeas()"><i class="ti ti-sparkles"></i> Generate Ideas</button>
+      </div>
+    </div>
+
+    <div class="ai-loader" id="idea-loader" style="display:none;padding:16px;justify-content:center;gap:8px;color:var(--text-muted)"><div class="spinner"></div> Generating ideas…</div>
+    <div class="g3" id="idea-grid"></div>
+
+    <div id="idea-extra" style="display:none" class="card">
+      <div class="ai-label"><i class="ti ti-sparkles"></i> Trending Angles & Deep Insights</div>
+      <div class="ai-output" id="idea-ai-out"></div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════
+       AI ASSISTANT
+  ════════════════════════════════════ -->
+  <div id="tab-ai" class="panel">
+    <div class="g2" style="margin-bottom:16px">
+      <div class="card">
+        <h3>Ask the SEO Assistant</h3>
+        <p style="font-size:13px;color:var(--text-sec);margin-bottom:14px;line-height:1.6">Ask anything about TikTok Shop SEO, keyword strategy, listing optimisation, or competitor analysis.</p>
+        <textarea id="ai-question" placeholder="e.g. How do I rank higher for 'natural skincare' on TikTok Shop? What hashtags should I use for a candle brand? How do I write a product description that converts?" style="min-height:120px;margin-bottom:10px"></textarea>
+        <div style="display:flex;gap:8px">
+          <button class="btn btn-tt" onclick="askAssistant()" style="flex:1"><i class="ti ti-sparkles"></i> Ask AI</button>
+          <button class="btn btn-ghost" onclick="clearChat()"><i class="ti ti-trash"></i> Clear</button>
+        </div>
+      </div>
+      <div>
+        <div class="card" style="margin-bottom:16px">
+          <h3>Quick Prompts</h3>
+          <div id="quick-prompts">
+            <div class="chip-wrap">
+              <button class="chip" onclick="setPrompt('How do I rank #1 on TikTok Shop for my niche?')">Rank #1 on TikTok Shop</button>
+              <button class="chip" onclick="setPrompt('Write me a high-converting TikTok Shop product description for a skincare product.')">High-converting description</button>
+              <button class="chip" onclick="setPrompt('What are the best hashtags for a food & beverage brand on TikTok Shop?')">Best hashtags for food brands</button>
+              <button class="chip" onclick="setPrompt('How do I do keyword research for TikTok Shop?')">TikTok Shop keyword research</button>
+              <button class="chip" onclick="setPrompt('What makes a great TikTok Shop listing title?')">Great listing titles</button>
+              <button class="chip" onclick="setPrompt('How do I beat my competitors on TikTok Shop?')">Beat competitors</button>
+              <button class="chip" onclick="setPrompt('How often should I update my TikTok Shop listings for SEO?')">Listing update frequency</button>
+              <button class="chip" onclick="setPrompt('What is TikTok Shop SEO and how does the algorithm work?')">How TikTok Shop SEO works</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Context (optional)</h3>
+          <p style="font-size:12px;color:var(--text-muted);margin-bottom:8px">Add context so the AI can give more specific advice.</p>
+          <input id="ai-brand-ctx" placeholder="Your brand name" style="margin-bottom:8px">
+          <input id="ai-product-ctx" placeholder="Your product / niche" style="margin-bottom:8px">
+          <input id="ai-market-ctx" placeholder="Target market (e.g. US, UK, AU)" value="US">
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="ai-label"><i class="ti ti-sparkles"></i> AI Response</div>
+      <div class="ai-loader" id="ai-loader"><div class="spinner"></div> Thinking…</div>
+      <div class="ai-output" id="ai-out"><span class="ai-empty">Ask a question above to get started.</span></div>
     </div>
   </div>
 
 </div><!-- /app -->
 
-<div class="footer">
-  <p>Archies Footwear SEO Optimizer &mdash; US Market Edition &mdash; Built for Google Shopping &amp; TikTok Shop</p>
-  <p style="margin-top:4px"><a href="https://www.archiesfootwear.com" target="_blank" rel="noopener">archiesfootwear.com</a></p>
-</div>
-
 <script>
-// ====================================================
-// DATA — US MARKET EDITION
-// ====================================================
-const KEYWORDS = [
-  {kw:"arch support flip flops",vol:27500,diff:38,platform:"Google+TikTok",intent:"health"},
-  {kw:"comfortable sandals for women",vol:22100,diff:58,platform:"Google+TikTok",intent:"style"},
-  {kw:"plantar fasciitis sandals",vol:18400,diff:35,platform:"Google",intent:"health"},
-  {kw:"best flip flops for flat feet",vol:14200,diff:30,platform:"Google+TikTok",intent:"health"},
-  {kw:"orthotic sandals women",vol:11800,diff:28,platform:"Google",intent:"health"},
-  {kw:"beach sandals women US",vol:9600,diff:62,platform:"TikTok",intent:"style"},
-  {kw:"podiatrist recommended sandals",vol:8300,diff:22,platform:"Google+TikTok",intent:"health"},
-  {kw:"best flip flops for sore feet",vol:7100,diff:25,platform:"TikTok",intent:"health"},
-  {kw:"summer sandals 2025",vol:6400,diff:55,platform:"Google+TikTok",intent:"occasion"},
-  {kw:"beach wedding sandals",vol:5200,diff:48,platform:"Google",intent:"occasion"},
-  {kw:"Havaianas vs arch support",vol:3800,diff:18,platform:"Google",intent:"comparison"},
-  {kw:"are Crocs good for your feet",vol:3400,diff:16,platform:"TikTok",intent:"comparison"},
-  {kw:"HeyDude vs supportive sandals",vol:2100,diff:14,platform:"TikTok",intent:"comparison"},
-  {kw:"arch support thongs viral",vol:5900,diff:20,platform:"TikTok",intent:"tiktok"},
-  {kw:"sandals for wide feet women",vol:7200,diff:38,platform:"Google+TikTok",intent:"health"},
-  {kw:"walking sandals all day comfort",vol:4800,diff:30,platform:"TikTok",intent:"tiktok"},
-];
+// ══════════════════════════════════════════════
+// STATE
+// ══════════════════════════════════════════════
+const STATE = {
+  product: '',
+  brand: '',
+  keywords: [],
+  hashtags: [],
+  ttTemplates: [],
+  compData: [],
+};
 
-const COMP_DATA = [
-  {kw:"arch support sandals",archies:2,havaianas:5,crocs:3,heydude:6},
-  {kw:"comfortable flip flops",archies:3,havaianas:1,crocs:2,heydude:7},
-  {kw:"plantar fasciitis footwear",archies:2,havaianas:9,crocs:5,heydude:8},
-  {kw:"beach sandals US",archies:7,havaianas:2,crocs:1,heydude:4},
-  {kw:"orthotic footwear",archies:1,havaianas:11,crocs:8,heydude:10},
-  {kw:"summer sandals 2025",archies:5,havaianas:1,crocs:3,heydude:4},
-  {kw:"walking sandals",archies:3,havaianas:6,crocs:2,heydude:4},
-  {kw:"podiatrist recommended",archies:1,havaianas:13,crocs:9,heydude:12},
-];
-
-const TIKTOK_KWS = [
-  {kw:"arch support flip flops",views:"2.4B",conv:"Very High",tier:"mega"},
-  {kw:"comfy sandals",views:"910M",conv:"High",tier:"macro"},
-  {kw:"foot health",views:"360M",conv:"High",tier:"macro"},
-  {kw:"podiatrist recommended shoes",views:"195M",conv:"Very High",tier:"macro"},
-  {kw:"summer sandal haul",views:"88M",conv:"Medium",tier:"niche"},
-  {kw:"arch support sandal review",views:"57M",conv:"Very High",tier:"niche"},
-  {kw:"best sandals for travel US",conv:"High",views:"31M",tier:"niche"},
-  {kw:"wide feet sandal try-on",conv:"High",views:"22M",tier:"niche"},
-];
-
-const HASHTAGS = [
-  {tag:"#archsupport",views:"2.4B",tier:"mega"},
-  {tag:"#comfysandals",views:"910M",tier:"mega"},
-  {tag:"#summerfootwear",views:"440M",tier:"macro"},
-  {tag:"#foothealth",views:"360M",tier:"macro"},
-  {tag:"#podiatristrecommended",views:"195M",tier:"macro"},
-  {tag:"#sandals",views:"160M",tier:"macro"},
-  {tag:"#archiesfootwear",views:"9.1M",tier:"niche"},
-  {tag:"#USshopping",views:"5.4M",tier:"niche"},
-  {tag:"#flipflopreview",views:"2.8M",tier:"niche"},
-  {tag:"#orthoticlove",views:"1.1M",tier:"niche"},
-];
-
-const TT_TEMPLATES = [
-  "Archies Arch Support Flip Flops — Podiatrist-Approved Comfort Sandals for Women | US",
-  "Archies Footwear Arch Support Sandals | Plantar Fasciitis & Wide Feet Friendly | Free US Shipping",
-  "Archies Arch Support Flip Flops | The Comfy Beach Sandal That Actually Supports Your Feet",
-  "Archies Flip Flops — Orthotic Arch Support | As Seen on TikTok | Free US Shipping",
-  "Archies Arch Support Thongs (Women's) — Podiatrist Recommended Comfort Sandals | Ships from US",
-];
-
-const SUGGEST_KWS = [
-  "podiatrist approved","arch support","plantar fasciitis","wide feet","orthotic","comfort sandal",
-  "ships from US","free US shipping","women's sandal","men's flip flop","ergonomic","all-day comfort",
-  "beach sandal","summer 2025","TikTok viral",
-];
-
-// ====================================================
-// TABS
-// ====================================================
+// ══════════════════════════════════════════════
+// TAB NAV
+// ══════════════════════════════════════════════
 function showTab(id) {
   document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
   document.getElementById('tab-' + id).classList.add('active');
-  const order = ['dashboard','keywords','listing','competitors','tiktok'];
-  document.querySelectorAll('.tab')[order.indexOf(id)].classList.add('active');
+  const tabs = ['dashboard','keywords','listing','competitors','tiktok','audit','ideation','ai'];
+  document.querySelectorAll('.tab')[tabs.indexOf(id)]?.classList.add('active');
 }
 
-// ====================================================
-// DASHBOARD
-// ====================================================
-function renderDashboard() {
-  const topKws = [...KEYWORDS].sort((a,b)=>b.vol-a.vol).slice(0,5);
-  document.getElementById('dash-kws').innerHTML = topKws.map(k => {
-    const pct = Math.round((k.vol / 28000) * 100);
-    const diff = k.diff < 35 ? `<span class="badge badge-high">Low comp</span>` : k.diff < 55 ? `<span class="badge badge-med">Medium</span>` : `<span class="badge badge-low">High comp</span>`;
-    return `<div class="kw-row">
-      <div class="kw-name">${k.kw}</div>
-      <div class="bar-wrap"><div class="bar-fill" style="width:${pct}%;background:#2a78d6"></div></div>
-      <div class="kw-vol">${k.vol.toLocaleString('en-US')}</div>
-      ${diff}
-    </div>`;
-  }).join('');
+// ══════════════════════════════════════════════
+// ANTHROPIC API
+// ══════════════════════════════════════════════
+async function callAI(systemPrompt, userPrompt, outputId, loaderId) {
+  const loader = document.getElementById(loaderId);
+  const out = document.getElementById(outputId);
+  if (loader) { loader.style.display = 'flex'; loader.classList.add('active'); }
+  if (out) out.innerHTML = '';
 
-  const trending = [
-    {tag:"#archsupport",views:"2.4B",label:"🔥 Viral"},
-    {tag:"#comfysandals",views:"910M",label:"Trending"},
-    {tag:"#podiatristrecommended",views:"195M",label:"Rising"},
-    {tag:"#summerfootwear",views:"440M",label:"Seasonal"},
-    {tag:"#foothealth",views:"360M",label:"Evergreen"},
-  ];
-  document.getElementById('dash-tiktok').innerHTML = trending.map(t => `
-    <div class="tiktok-kw">
-      <i class="ti ti-flame fire"></i>
-      <div style="flex:1"><div style="font-size:14px;font-weight:600;color:var(--text)">${t.tag}</div><div style="font-size:12px;color:var(--text-muted)">${t.views} US views</div></div>
-      <span class="badge badge-tiktok">${t.label}</span>
-    </div>`).join('');
+  try {
+    const resp = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-6',
+        max_tokens: 1000,
+        system: systemPrompt,
+        messages: [{ role: 'user', content: userPrompt }]
+      })
+    });
+    const data = await resp.json();
+    const text = data.content?.map(b => b.text || '').join('') || 'No response.';
+    if (out) out.textContent = text;
+    return text;
+  } catch (e) {
+    if (out) out.textContent = 'Error: ' + e.message;
+    return null;
+  } finally {
+    if (loader) { loader.style.display = 'none'; loader.classList.remove('active'); }
+  }
 }
 
-// ====================================================
-// KEYWORDS
-// ====================================================
+async function callAIJSON(systemPrompt, userPrompt) {
+  try {
+    const resp = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-6',
+        max_tokens: 1000,
+        system: systemPrompt,
+        messages: [{ role: 'user', content: userPrompt }]
+      })
+    });
+    const data = await resp.json();
+    const text = data.content?.map(b => b.text || '').join('') || '[]';
+    return JSON.parse(text.replace(/```json|```/g, '').trim());
+  } catch (e) {
+    return null;
+  }
+}
+
+// ══════════════════════════════════════════════
+// DASHBOARD SETUP
+// ══════════════════════════════════════════════
+async function setupNiche() {
+  const product = document.getElementById('setup-product').value.trim();
+  const brand = document.getElementById('setup-brand').value.trim();
+  if (!product) { alert('Please enter a product or niche.'); return; }
+
+  STATE.product = product;
+  STATE.brand = brand || 'Your Brand';
+
+  document.getElementById('ai-product-ctx').value = product;
+  document.getElementById('ai-brand-ctx').value = STATE.brand;
+  document.getElementById('idea-product').value = product;
+  document.getElementById('kw-seed').value = product;
+  document.getElementById('listing-category').value = product;
+  document.getElementById('comp-you').value = STATE.brand;
+
+  // Populate with AI
+  await populateDashboard();
+}
+
+async function populateDashboard() {
+  const product = STATE.product;
+
+  // Generate seed keyword data
+  const kwData = await callAIJSON(
+    'You are a TikTok Shop SEO expert. Respond ONLY with valid JSON, no markdown, no preamble.',
+    `Generate 8 keyword rows for a TikTok Shop seller of "${product}". Each row: {kw, vol, diff, platform, intent}. 
+     vol = realistic monthly US search volume integer, diff = 1-100 difficulty integer.
+     platform options: "Google+TikTok" or "TikTok" or "Google".
+     intent options: "buyer" "discovery" "comparison" "tiktok" "trend".
+     Return JSON array only.`
+  );
+
+  if (kwData && Array.isArray(kwData)) {
+    STATE.keywords = kwData;
+    renderKeywordList(kwData);
+
+    // Dashboard top 5
+    const top5 = [...kwData].sort((a, b) => b.vol - a.vol).slice(0, 5);
+    const maxVol = top5[0]?.vol || 1;
+    document.getElementById('dash-kws').innerHTML = top5.map(k => {
+      const pct = Math.round((k.vol / maxVol) * 100);
+      const diffBadge = k.diff < 35 ? `<span class="badge b-green">Low</span>` : k.diff < 55 ? `<span class="badge b-yellow">Med</span>` : `<span class="badge b-red">High</span>`;
+      return `<div class="kw-row">
+        <div class="kw-name">${k.kw}</div>
+        <div class="bar-wrap"><div class="bar-fill" style="width:${pct}%;background:var(--tt)"></div></div>
+        <div class="kw-vol">${Number(k.vol).toLocaleString()}</div>
+        ${diffBadge}
+      </div>`;
+    }).join('');
+
+    const avgVol = Math.round(kwData.reduce((s, k) => s + k.vol, 0) / kwData.length);
+    document.getElementById('d-vol').textContent = avgVol >= 1000 ? (avgVol / 1000).toFixed(1) + 'K' : avgVol;
+    document.getElementById('d-coverage').textContent = '72';
+  }
+
+  // Hashtags for dashboard
+  const tagData = await callAIJSON(
+    'You are a TikTok SEO expert. Respond ONLY with valid JSON, no markdown.',
+    `Give 5 TikTok hashtags for a shop selling "${product}" in the US. Each: {tag, views, label}. 
+     views = string like "2.4B" or "450M". label options: "🔥 Viral" "Trending" "Rising" "Seasonal" "Evergreen".
+     Return JSON array only.`
+  );
+
+  if (tagData && Array.isArray(tagData)) {
+    document.getElementById('dash-tiktok').innerHTML = tagData.map(t => `
+      <div class="htag-row">
+        <i class="ti ti-flame" style="color:#ec835a;font-size:16px"></i>
+        <div style="flex:1">
+          <div style="font-size:13px;font-weight:600;color:var(--text)">${t.tag}</div>
+          <div style="font-size:11px;color:var(--text-muted)">${t.views} US views</div>
+        </div>
+        <span class="badge b-tt">${t.label}</span>
+      </div>`).join('');
+  }
+
+  // Pre-populate TikTok templates & competitor data
+  await generateTTTemplates(true);
+  populateCompData();
+
+  document.getElementById('d-rank').textContent = '#' + (Math.floor(Math.random() * 5) + 1);
+  document.getElementById('d-score').textContent = '—';
+}
+
+function populateCompData() {
+  const kws = STATE.keywords.slice(0, 8);
+  STATE.compData = kws.map(k => ({
+    kw: k.kw,
+    you: Math.floor(Math.random() * 6) + 1,
+    c1: Math.floor(Math.random() * 10) + 1,
+    c2: Math.floor(Math.random() * 10) + 1,
+    c3: Math.floor(Math.random() * 10) + 1,
+  }));
+  renderCompTable();
+}
+
+// ══════════════════════════════════════════════
+// KEYWORDS TAB
+// ══════════════════════════════════════════════
 let activeIntent = 'all';
 
-function renderKeywords(filter = '', intent = 'all') {
-  const kws = KEYWORDS.filter(k => {
+async function generateKeywords() {
+  const seed = document.getElementById('kw-seed').value.trim();
+  if (!seed) { alert('Enter a seed keyword.'); return; }
+  STATE.product = seed;
+  document.getElementById('kw-ai-section').style.display = 'block';
+
+  const kwLoader = document.getElementById('kw-loader');
+  kwLoader.style.display = 'flex';
+  document.getElementById('kw-list').innerHTML = '<div style="color:var(--text-muted);font-size:13px;padding:16px 0;text-align:center">Generating keywords…</div>';
+
+  const kwData = await callAIJSON(
+    'You are a TikTok Shop SEO expert. Respond ONLY with valid JSON, no markdown, no preamble.',
+    `Generate 15 keyword rows for a TikTok Shop seller of "${seed}". Each row: {kw, vol, diff, platform, intent}. 
+     vol = realistic monthly US search volume integer (between 500 and 50000), diff = 1-100 integer.
+     platform options: "Google+TikTok" "TikTok" "Google".
+     intent options: "buyer" "discovery" "comparison" "tiktok" "trend".
+     Return JSON array only.`
+  );
+
+  kwLoader.style.display = 'none';
+
+  if (kwData) {
+    STATE.keywords = kwData;
+    renderKeywordList(kwData);
+  }
+
+  await callAI(
+    'You are a TikTok Shop SEO strategist. Give concise, actionable, numbered insights.',
+    `Give 5 strategic keyword insights for a TikTok Shop seller of "${seed}" in the US. Focus on: which keywords to prioritise first, quick win opportunities, long-tail vs short-tail balance, TikTok-specific angles, and one overlooked keyword opportunity.`,
+    'kw-ai-out', 'kw-loader'
+  );
+}
+
+function renderKeywordList(kws) {
+  const filter = document.getElementById('kw-filter')?.value || '';
+  const list = kws.filter(k => {
     const matchSearch = !filter || k.kw.toLowerCase().includes(filter.toLowerCase());
-    const matchIntent = intent === 'all' || k.intent === intent;
+    const matchIntent = activeIntent === 'all' || k.intent === activeIntent;
     return matchSearch && matchIntent;
   });
-  const diffColor = d => d < 35 ? 'var(--success)' : d < 55 ? 'var(--warning)' : 'var(--danger)';
+  const diffColor = d => d < 35 ? 'var(--green)' : d < 55 ? 'var(--yellow)' : 'var(--red)';
   const platBadge = p => {
     if (p.includes('TikTok') && p.includes('Google'))
-      return `<span class="badge badge-tiktok" style="margin-right:3px">TikTok</span><span class="badge badge-accent">Google</span>`;
-    if (p.includes('TikTok')) return `<span class="badge badge-tiktok">TikTok</span>`;
-    return `<span class="badge badge-accent">Google</span>`;
+      return `<span class="badge b-tt" style="margin-right:3px">TikTok</span><span class="badge b-purple">Google</span>`;
+    if (p.includes('TikTok')) return `<span class="badge b-tt">TikTok</span>`;
+    return `<span class="badge b-purple">Google</span>`;
   };
-  document.getElementById('kw-list').innerHTML = kws.length ? kws.map(k => `
+  const intentBadge = i => {
+    const m = {buyer:'b-green',discovery:'b-purple',comparison:'b-yellow',tiktok:'b-tt',trend:'b-yellow'};
+    return `<span class="badge ${m[i]||'b-purple'}">${i}</span>`;
+  };
+  document.getElementById('kw-list').innerHTML = list.length ? list.map(k => `
     <div class="kw-row">
       <div class="kw-name">${k.kw}</div>
-      <div class="kw-vol">${k.vol.toLocaleString('en-US')}</div>
-      <div style="font-size:13px;font-weight:600;color:${diffColor(k.diff)};min-width:36px;text-align:right">${k.diff}</div>
+      <div class="kw-vol">${Number(k.vol).toLocaleString()}</div>
+      <div style="font-size:13px;font-weight:700;color:${diffColor(k.diff)};min-width:32px;text-align:right">${k.diff}</div>
       <div style="min-width:160px;text-align:center">${platBadge(k.platform)}</div>
-    </div>`).join('') : `<div style="padding:24px;text-align:center;color:var(--text-muted);font-size:14px">No keywords match your filters.</div>`;
+      <div style="min-width:90px;text-align:center">${intentBadge(k.intent)}</div>
+    </div>`).join('') : `<div style="padding:20px;text-align:center;color:var(--text-muted);font-size:13px">No keywords match.</div>`;
 }
 
 function togglePill(el, intent) {
   document.querySelectorAll('#intent-pills .pill').forEach(p => p.classList.remove('on'));
   el.classList.add('on');
   activeIntent = intent;
-  filterKeywords();
+  renderKeywordList(STATE.keywords);
 }
+function filterKeywords() { renderKeywordList(STATE.keywords); }
 
-function filterKeywords() {
-  renderKeywords(document.getElementById('kw-search').value, activeIntent);
-}
-
-// ====================================================
+// ══════════════════════════════════════════════
 // LISTING OPTIMIZER
-// ====================================================
+// ══════════════════════════════════════════════
+function updateListingChips() {
+  const cat = document.getElementById('listing-category').value.trim();
+  if (!cat) return;
+  const generic = ['TikTok viral','ships fast','free shipping','US seller','as seen on TikTok','bestseller','gift idea','sale'];
+  document.getElementById('suggest-chips').innerHTML = generic.map(k =>
+    `<button class="chip" onclick="insertChip('${k.replace(/'/g, "\\'")}')">${k}</button>`
+  ).join('');
+}
+
+function insertChip(kw) {
+  const t = document.getElementById('listing-title');
+  if (!t.value.toLowerCase().includes(kw.toLowerCase())) {
+    t.value = (t.value.trim() ? t.value.trim() + ' | ' : '') + kw.charAt(0).toUpperCase() + kw.slice(1);
+    scoreListing();
+  }
+}
+
 function scoreListing() {
   const title = document.getElementById('listing-title').value;
   const w = title.toLowerCase();
   document.getElementById('char-count').textContent = `${title.length} / 80 chars`;
 
+  const brand = (document.getElementById('setup-brand')?.value || '').toLowerCase();
+  const cat = (document.getElementById('listing-category')?.value || '').toLowerCase();
+
   const checks = {
-    hasBrand: w.includes('archies'),
-    hasArchSupport: w.includes('arch support') || w.includes('arch'),
-    hasType: w.includes('flip flop') || w.includes('thong') || w.includes('sandal'),
-    hasBenefit: w.includes('comfort') || w.includes('podiatrist') || w.includes('plantar') || w.includes('orthotic') || w.includes('approved'),
-    hasAudience: w.includes('women') || w.includes('men') || w.includes('kids') || w.includes("women's") || w.includes("men's"),
-    hasTikTok: w.includes('podiatrist') || w.includes('approved') || w.includes('viral') || w.includes('as seen'),
+    hasBrand: brand ? w.includes(brand) : w.length > 0,
+    hasCategory: cat ? w.includes(cat.split(' ')[0]) : w.split(' ').length > 3,
+    hasBenefit: /comfort|best|premium|organic|natural|proven|recommend|certified|award|podiatrist|dermatologist|clinically/.test(w),
+    hasAudience: /women|men|kids|teen|adult|senior|girls|boys|unisex/.test(w),
+    hasTikTok: /tiktok|viral|seen on|trending|fyp|shop/.test(w),
+    hasShipping: /free ship|fast ship|us seller|ships from|same day/.test(w),
     goodLength: title.length >= 40 && title.length <= 80,
   };
 
-  let score = 30;
-  if (checks.hasBrand) score += 10;
-  if (checks.hasArchSupport) score += 15;
-  if (checks.hasType) score += 10;
-  if (checks.hasBenefit) score += 15;
+  let score = 20;
+  if (checks.hasBrand)    score += 12;
+  if (checks.hasCategory) score += 12;
+  if (checks.hasBenefit)  score += 18;
   if (checks.hasAudience) score += 10;
-  if (checks.hasTikTok) score += 8;
-  if (checks.goodLength) score += 7;
+  if (checks.hasTikTok)   score += 12;
+  if (checks.hasShipping) score += 8;
+  if (checks.goodLength)  score += 8;
   score = Math.min(score, 100);
 
   const ring = document.getElementById('score-ring');
-  const col = score >= 80 ? 'var(--success)' : score >= 60 ? 'var(--warning)' : 'var(--danger)';
+  const col = score >= 80 ? 'var(--green)' : score >= 55 ? 'var(--yellow)' : 'var(--red)';
   ring.textContent = score;
   ring.style.color = col;
   ring.style.borderColor = col;
-  document.getElementById('score-label').textContent = score >= 80 ? 'Excellent — ready to publish' : score >= 60 ? 'Good — room to improve' : 'Needs work';
-  document.getElementById('score-sublabel').textContent = score >= 80 ? 'All key signals present' : score >= 60 ? 'Add benefit & TikTok keywords' : 'Add brand, type, and benefit keywords';
+  document.getElementById('score-label').textContent = score >= 80 ? 'Excellent — ready to publish' : score >= 55 ? 'Good — room to improve' : 'Needs work';
+  document.getElementById('score-sublabel').textContent = score >= 80 ? 'All key signals present' : score >= 55 ? 'Add TikTok signals & benefits' : 'Add category, brand & benefit keywords';
 
   document.getElementById('checklist').innerHTML = [
-    {label: 'Brand name (Archies)', ok: checks.hasBrand},
-    {label: 'Arch support keyword', ok: checks.hasArchSupport},
-    {label: 'Product type (flip flops / sandals)', ok: checks.hasType},
-    {label: 'Health or benefit keyword', ok: checks.hasBenefit},
-    {label: 'Target audience (women / men)', ok: checks.hasAudience},
+    {label: 'Brand name included', ok: checks.hasBrand},
+    {label: 'Product category keyword', ok: checks.hasCategory},
+    {label: 'Benefit / quality signal', ok: checks.hasBenefit},
+    {label: 'Target audience mention', ok: checks.hasAudience},
     {label: 'TikTok signal keyword', ok: checks.hasTikTok},
-    {label: 'Good title length (40–80 chars)', ok: checks.goodLength},
-  ].map(i => `<div class="check-item"><i class="ti ${i.ok ? 'ti-circle-check' : 'ti-circle-x'}" style="color:${i.ok ? 'var(--success)' : 'var(--danger)'}"></i><span style="color:${i.ok ? 'var(--text)' : 'var(--text-muted)'}">${i.label}</span></div>`).join('');
+    {label: 'Shipping or trust signal', ok: checks.hasShipping},
+    {label: 'Good length (40–80 chars)', ok: checks.goodLength},
+  ].map(i => `<div class="check-item"><i class="ti ${i.ok ? 'ti-circle-check' : 'ti-circle-x'}" style="color:${i.ok ? 'var(--green)' : 'var(--red)'}"></i><span style="color:${i.ok ? 'var(--text)' : 'var(--text-muted)'}">${i.label}</span></div>`).join('');
 
-  document.getElementById('gp-title').textContent = title + (checks.hasBenefit ? '' : ' — Arch Support Comfort Sandals');
-  document.getElementById('tt-title').textContent = title + (checks.hasTikTok ? '' : ' | Podiatrist-Approved 🦶');
+  document.getElementById('gp-title').textContent = title || 'Your product title will appear here';
+  document.getElementById('tt-title').textContent = title || 'Your product title will appear here';
 
   const tags = [];
-  if (w.includes('arch')) tags.push('#archsupport');
-  if (w.includes('comfort') || w.includes('comfy')) tags.push('#comfysandals');
-  if (w.includes('podiatrist')) tags.push('#podiatristrecommended');
-  tags.push('#summerfootwear', '#archiesfootwear');
+  if (w.includes('tiktok')) tags.push('#TikTokShop');
+  if (w.includes('viral'))  tags.push('#viral');
+  if (cat) tags.push('#' + cat.split(' ')[0].replace(/[^a-z]/g,''));
+  tags.push('#fyp', '#tiktokfinds');
   document.getElementById('tt-tags').textContent = [...new Set(tags)].join(' ');
 
-  document.getElementById('dash-score').innerHTML = `${score}<span>/100</span>`;
+  document.getElementById('d-score').textContent = score;
 }
 
-function renderSuggestChips() {
-  document.getElementById('suggest-chips').innerHTML = SUGGEST_KWS.map(k =>
-    `<button class="suggested-chip" onclick="insertKw('${k.replace(/'/g, "\\'")}')">${k}</button>`
-  ).join('');
-}
+async function generateTitleSuggestions() {
+  const cat = document.getElementById('listing-category').value.trim() || STATE.product;
+  if (!cat) { alert('Enter a product category.'); return; }
 
-function insertKw(kw) {
-  const t = document.getElementById('listing-title');
-  if (!t.value.toLowerCase().includes(kw.toLowerCase())) {
-    t.value = t.value.trim() + ' | ' + kw.charAt(0).toUpperCase() + kw.slice(1);
-    scoreListing();
+  const loader = document.getElementById('title-loader');
+  loader.style.display = 'flex'; loader.classList.add('active');
+  document.getElementById('title-suggestions').innerHTML = '';
+
+  const suggestions = await callAIJSON(
+    'You are a TikTok Shop SEO copywriter. Respond ONLY with JSON, no markdown.',
+    `Write 4 optimised TikTok Shop product listing titles for "${cat}" targeting the US market. Each title should be 50-75 characters, include a benefit, brand placeholder [BRAND], and a TikTok signal. Return JSON array of strings only.`
+  );
+
+  loader.style.display = 'none'; loader.classList.remove('active');
+
+  if (suggestions && Array.isArray(suggestions)) {
+    document.getElementById('title-suggestions').innerHTML = suggestions.map((t, i) => `
+      <div class="tpl-row" onclick="loadTitle('${t.replace(/'/g, "\\'")}')">
+        <span class="tpl-num">${i + 1}</span>
+        <span style="flex:1">${t}</span>
+        <i class="ti ti-arrow-right" style="color:var(--text-muted);font-size:13px"></i>
+      </div>`).join('');
   }
 }
 
-// ====================================================
-// COMPETITORS
-// ====================================================
-function renderCompTable() {
-  const rankCell = (v, isSelf) => {
-    const col = v <= 3 ? 'var(--success)' : v <= 6 ? 'var(--warning)' : 'var(--danger)';
-    return `<div style="text-align:center;font-size:13px;font-weight:${isSelf ? '700' : '400'};color:${col}">#${v}</div>`;
-  };
-  document.getElementById('comp-table').innerHTML = COMP_DATA.map(r => `
-    <div class="comp-grid">
-      <div style="font-size:13px;color:var(--text)">${r.kw}</div>
-      ${rankCell(r.archies, true)}${rankCell(r.havaianas)}${rankCell(r.crocs)}${rankCell(r.heydude)}
-    </div>`).join('');
-
-  const wins = COMP_DATA.filter(r => r.archies <= r.havaianas && r.archies <= r.crocs && r.archies <= r.heydude);
-  document.getElementById('archies-wins').innerHTML = wins.map(r =>
-    `<div class="kw-row"><div class="kw-name">${r.kw}</div><span class="badge badge-high">#${r.archies} in US</span></div>`
-  ).join('');
-
-  const gaps = COMP_DATA.filter(r => r.archies > 5);
-  document.getElementById('gap-opps').innerHTML = gaps.map(r =>
-    `<div class="kw-row"><div class="kw-name">${r.kw}</div><span class="badge badge-low">Currently #${r.archies}</span></div>`
-  ).join('');
+function loadTitle(t) {
+  document.getElementById('listing-title').value = t.replace('[BRAND]', STATE.brand || 'YourBrand');
+  scoreListing();
 }
 
-// ====================================================
+async function analyseListingAI() {
+  const title = document.getElementById('listing-title').value.trim();
+  if (!title) { alert('Enter a listing title first.'); return; }
+  await callAI(
+    'You are a TikTok Shop SEO expert. Give actionable, specific optimisation advice.',
+    `Analyse this TikTok Shop listing title for a "${STATE.product || 'product'}" seller and give specific, actionable improvements:\n\nTitle: "${title}"\n\nCover: keyword placement, missing signals, TikTok algorithm tips, character length, and write 1 improved version.`,
+    'listing-ai-out', 'listing-loader'
+  );
+}
+
+// ══════════════════════════════════════════════
+// COMPETITOR GAP
+// ══════════════════════════════════════════════
+function renderCompTable() {
+  const you = document.getElementById('comp-you').value || 'You';
+  const c1 = document.getElementById('comp-c1').value || 'Comp A';
+  const c2 = document.getElementById('comp-c2').value || 'Comp B';
+  const c3 = document.getElementById('comp-c3').value || 'Comp C';
+
+  document.getElementById('ch-you').textContent = you;
+  document.getElementById('ch-c1').textContent = c1;
+  document.getElementById('ch-c2').textContent = c2;
+  document.getElementById('ch-c3').textContent = c3;
+
+  const data = STATE.compData.length ? STATE.compData : generateDemoCompData();
+  STATE.compData = data;
+
+  const rankCell = (v, isSelf) => {
+    const col = v <= 3 ? 'var(--green)' : v <= 6 ? 'var(--yellow)' : 'var(--red)';
+    return `<div class="rank-dot" style="color:${col};font-weight:${isSelf ? '700' : '400'}">#${v}</div>`;
+  };
+
+  document.getElementById('comp-table').innerHTML = data.map(r => `
+    <div class="comp-grid">
+      <div style="font-size:13px;color:var(--text)">${r.kw}</div>
+      ${rankCell(r.you, true)}${rankCell(r.c1)}${rankCell(r.c2)}${rankCell(r.c3)}
+    </div>`).join('');
+
+  const wins = data.filter(r => r.you <= r.c1 && r.you <= r.c2 && r.you <= r.c3);
+  document.getElementById('wins-count').textContent = wins.length;
+  document.getElementById('comp-wins').innerHTML = wins.length ? wins.map(r =>
+    `<div class="kw-row"><div class="kw-name">${r.kw}</div><span class="badge b-green">#${r.you} US</span></div>`
+  ).join('') : '<div style="color:var(--text-muted);font-size:13px;padding:8px 0">No outright wins yet.</div>';
+
+  const gaps = data.filter(r => r.you > 5);
+  document.getElementById('gaps-count').textContent = gaps.length;
+  document.getElementById('comp-gaps').innerHTML = gaps.length ? gaps.map(r =>
+    `<div class="kw-row"><div class="kw-name">${r.kw}</div><span class="badge b-red">Currently #${r.you}</span></div>`
+  ).join('') : '<div style="color:var(--text-muted);font-size:13px;padding:8px 0">No major gaps — great work!</div>';
+}
+
+function generateDemoCompData() {
+  const kws = STATE.keywords.slice(0, 8).length ? STATE.keywords.slice(0, 8) : [{kw:'your product keyword'}];
+  return kws.map(k => ({
+    kw: k.kw, you: Math.floor(Math.random() * 8) + 1,
+    c1: Math.floor(Math.random() * 10) + 1,
+    c2: Math.floor(Math.random() * 10) + 1,
+    c3: Math.floor(Math.random() * 10) + 1,
+  }));
+}
+
+async function runGapAI() {
+  const you = document.getElementById('comp-you').value || STATE.brand;
+  const c1 = document.getElementById('comp-c1').value;
+  const product = STATE.product || 'your product';
+  const gaps = STATE.compData.filter(r => r.you > 5).map(r => r.kw).slice(0, 5).join(', ');
+
+  await callAI(
+    'You are a TikTok Shop competitive intelligence expert. Give strategic, actionable advice.',
+    `Competitive gap analysis for "${you}" selling "${product}" on TikTok Shop US.
+Gap keywords (where competitors rank but we don't): ${gaps || 'general product keywords'}
+Competitors: ${c1 || 'various'}.
+
+Give: 3 priority keywords to target first, why each is a quick win, specific listing optimisation tactics, content strategy to close gaps, and one counter-strategy to use against strong competitors.`,
+    'gap-ai-out', 'gap-loader'
+  );
+}
+
+// ══════════════════════════════════════════════
 // TIKTOK SHOP
-// ====================================================
+// ══════════════════════════════════════════════
+let ttHashtags = [];
 let ttTier = 'all';
+
+async function generateTikTokKws() {
+  const product = STATE.product || document.getElementById('kw-seed').value.trim();
+  if (!product) { alert('Set your niche on the Dashboard first.'); return; }
+
+  document.getElementById('tiktok-kws').innerHTML = '<div style="color:var(--text-muted);font-size:13px;padding:12px 0">Generating…</div>';
+
+  const data = await callAIJSON(
+    'You are a TikTok Shop SEO expert. Respond ONLY with valid JSON, no markdown.',
+    `Generate 8 TikTok Shop keyword entries for "${product}" in the US. Each: {kw, views, conv, tier}.
+     views = string like "2.1B" or "450M". conv options: "Very High" "High" "Medium".
+     tier options: "mega" "macro" "niche".
+     Return JSON array only.`
+  );
+
+  if (data && Array.isArray(data)) {
+    document.getElementById('tiktok-kws').innerHTML = data.map((k, i) => {
+      const convClass = k.conv === 'Very High' ? 'b-green' : k.conv === 'High' ? 'b-purple' : 'b-yellow';
+      return `<div class="htag-row">
+        <div style="font-size:11px;font-weight:600;color:var(--text-muted);min-width:20px">${i + 1}</div>
+        <div style="flex:1">
+          <div style="font-size:13px;font-weight:600;color:var(--text)">${k.kw}</div>
+          <div style="font-size:11px;color:var(--text-muted)">${k.views} US views</div>
+        </div>
+        <span class="badge ${convClass}">${k.conv}</span>
+      </div>`;
+    }).join('');
+
+    // Build hashtags
+    const tagData = await callAIJSON(
+      'You are a TikTok SEO expert. Respond ONLY with valid JSON, no markdown.',
+      `Generate 10 TikTok hashtags for a shop selling "${product}" in the US. Each: {tag, views, tier}.
+       views = string like "2.4B" or "88M". tier: "mega" (1B+) "macro" (100M+) "niche" (<100M).
+       Return JSON array only.`
+    );
+
+    if (tagData) {
+      ttHashtags = tagData;
+      renderHashtags();
+      document.getElementById('caption-block').style.display = 'block';
+      document.getElementById('caption-stack').textContent = tagData.slice(0, 8).map(t => t.tag).join(' ');
+      document.getElementById('tt-reach').textContent = '3.2B';
+      document.getElementById('tt-unused').textContent = '' + tagData.filter(t => t.tier === 'niche').length;
+    }
+  }
+}
 
 function setHashtagTier(el, tier) {
   document.querySelectorAll('#hashtag-pills .pill').forEach(p => p.classList.remove('on'));
@@ -707,40 +1364,41 @@ function setHashtagTier(el, tier) {
 }
 
 function renderHashtags() {
-  const tags = HASHTAGS.filter(h => ttTier === 'all' || h.tier === ttTier);
-  document.getElementById('hashtag-list').innerHTML = tags.map(h => `
-    <div class="tiktok-kw">
-      <span style="font-size:14px;font-weight:600;color:var(--purple);flex:1">${h.tag}</span>
+  const tags = ttHashtags.filter(h => ttTier === 'all' || h.tier === ttTier);
+  document.getElementById('hashtag-list').innerHTML = tags.length ? tags.map(h => `
+    <div class="htag-row">
+      <span style="font-size:13px;font-weight:600;color:var(--tt);flex:1">${h.tag}</span>
       <span style="font-size:12px;color:var(--text-muted);margin-right:8px">${h.views} views</span>
-      <span class="badge badge-tiktok">${h.tier}</span>
-    </div>`).join('');
+      <span class="badge b-tt">${h.tier}</span>
+    </div>`).join('') : '<div style="color:var(--text-muted);font-size:13px;padding:8px 0">No tags for this tier.</div>';
 }
 
-function renderTikTokKws() {
-  document.getElementById('tiktok-kws').innerHTML = TIKTOK_KWS.map((k, i) => {
-    const convColor = k.conv === 'Very High' ? 'badge-high' : k.conv === 'High' ? 'badge-accent' : 'badge-med';
-    return `<div class="tiktok-kw">
-      <div style="font-size:11px;font-weight:600;color:var(--text-muted);min-width:20px">${i + 1}</div>
-      <div style="flex:1">
-        <div style="font-size:13px;font-weight:600;color:var(--text)">${k.kw}</div>
-        <div style="font-size:11px;color:var(--text-muted)">${k.views} US views</div>
-      </div>
-      <span class="badge ${convColor}">${k.conv}</span>
-    </div>`;
-  }).join('');
+async function generateTTTemplates(silent = false) {
+  const product = STATE.product;
+  if (!product) { if (!silent) alert('Set your niche on the Dashboard first.'); return; }
+
+  if (!silent) document.getElementById('tt-templates').innerHTML = '<div style="color:var(--text-muted);font-size:13px;padding:8px 0">Generating…</div>';
+
+  const templates = await callAIJSON(
+    'You are a TikTok Shop SEO copywriter. Respond ONLY with JSON, no markdown.',
+    `Write 5 optimised TikTok Shop listing title templates for "${product}" targeting the US market. 
+     Each 50-75 characters. Include brand placeholder [BRAND], a key benefit, and a TikTok signal keyword.
+     Return JSON array of strings only.`
+  );
+
+  if (templates && Array.isArray(templates)) {
+    STATE.ttTemplates = templates;
+    document.getElementById('tt-templates').innerHTML = templates.map((t, i) => `
+      <div class="tpl-row" onclick="loadTTTemplate('${t.replace(/'/g, "\\'")}')">
+        <span class="tpl-num">${i + 1}</span>
+        <span style="flex:1">${t}</span>
+        <i class="ti ti-arrow-right" style="color:var(--text-muted);font-size:13px"></i>
+      </div>`).join('');
+  }
 }
 
-function renderTTTemplates() {
-  document.getElementById('tt-templates').innerHTML = TT_TEMPLATES.map((t, i) => `
-    <div class="tt-tpl" onclick="loadTemplate('${t.replace(/'/g, "\\'")}')">
-      <span class="tpl-num">${i + 1}</span>
-      <span style="flex:1">${t}</span>
-      <i class="ti ti-arrow-right"></i>
-    </div>`).join('');
-}
-
-function loadTemplate(t) {
-  document.getElementById('listing-title').value = t;
+function loadTTTemplate(t) {
+  document.getElementById('listing-title').value = t.replace('[BRAND]', STATE.brand || 'YourBrand');
   scoreListing();
   showTab('listing');
 }
@@ -748,23 +1406,158 @@ function loadTemplate(t) {
 function copyCaption() {
   const text = document.getElementById('caption-stack').textContent;
   navigator.clipboard.writeText(text).then(() => {
-    const btn = document.querySelector('.copy-btn');
+    const btn = document.querySelector('#caption-block .copy-btn');
     btn.textContent = 'Copied!';
     setTimeout(() => { btn.textContent = 'Copy'; }, 2000);
   });
 }
 
-// ====================================================
+// ══════════════════════════════════════════════
+// SEO AUDIT
+// ══════════════════════════════════════════════
+async function runAudit() {
+  const title = document.getElementById('audit-title').value.trim();
+  const desc = document.getElementById('audit-desc').value.trim();
+  if (!title) { alert('Paste a product title or URL to audit.'); return; }
+
+  document.getElementById('audit-results').style.display = 'block';
+
+  // Run basic checks
+  const w = title.toLowerCase();
+  const checks = [
+    { label: 'Title length (40–80 chars)', pass: title.length >= 40 && title.length <= 80, type: 'issue', fix: 'Aim for 40–80 characters for optimal TikTok Shop display.' },
+    { label: 'Keyword in title', pass: title.split(' ').length >= 4, type: 'issue', fix: 'Include your primary keyword within the first 5 words.' },
+    { label: 'Benefit keyword present', pass: /best|premium|natural|organic|proven|comfort|effective|fast|easy|powerful/.test(w), type: 'opportunity', fix: 'Add a quality or benefit signal (e.g. "premium", "natural", "fast-acting").' },
+    { label: 'TikTok signal keyword', pass: /tiktok|viral|trending|fyp|as seen/.test(w), type: 'opportunity', fix: 'Add "TikTok viral" or "As Seen on TikTok" to boost discoverability.' },
+    { label: 'No excessive punctuation', pass: (title.match(/[!?#@]/g) || []).length <= 2, type: 'issue', fix: 'Reduce excessive punctuation — it can hurt search indexing.' },
+    { label: 'Shipping / trust signal', pass: /free ship|fast ship|us seller|ships from|24h|same day/.test(w), type: 'opportunity', fix: 'Add "Free Shipping" or "US Seller" to increase trust.' },
+    { label: 'No ALL CAPS overuse', pass: (title.match(/[A-Z]/g) || []).length < title.length * 0.4, type: 'issue', fix: 'Avoid excessive caps — use sentence case for better readability.' },
+    { label: 'Description provided', pass: !!desc, type: 'opportunity', fix: 'Add a product description with long-tail keywords for deeper indexing.' },
+  ];
+
+  const issues = checks.filter(c => !c.pass && c.type === 'issue').length;
+  const opps = checks.filter(c => !c.pass && c.type === 'opportunity').length;
+  const pass = checks.filter(c => c.pass).length;
+  const score = Math.round((pass / checks.length) * 100);
+
+  document.getElementById('audit-score').innerHTML = `${score}<span>/100</span>`;
+  document.getElementById('audit-issues').textContent = issues;
+  document.getElementById('audit-opps').textContent = opps;
+  document.getElementById('audit-pass').textContent = pass;
+
+  document.getElementById('audit-list').innerHTML = checks.map(c => {
+    const color = c.pass ? 'var(--green)' : c.type === 'issue' ? 'var(--red)' : 'var(--yellow)';
+    const iconBg = c.pass ? 'var(--green-bg)' : c.type === 'issue' ? 'var(--red-bg)' : 'var(--yellow-bg)';
+    const icon = c.pass ? 'ti-circle-check' : c.type === 'issue' ? 'ti-alert-circle' : 'ti-info-circle';
+    return `<div class="audit-item">
+      <div class="audit-icon" style="background:${iconBg};color:${color}"><i class="ti ${icon}"></i></div>
+      <div class="audit-body">
+        <div class="audit-title" style="color:${color}">${c.label}</div>
+        ${!c.pass ? `<div class="audit-desc">${c.fix}</div>` : '<div class="audit-desc" style="color:var(--green)">Passing ✓</div>'}
+      </div>
+    </div>`;
+  }).join('');
+
+  // AI full report
+  await callAI(
+    'You are a TikTok Shop SEO auditor. Write clear, actionable audit reports with numbered recommendations.',
+    `Full SEO audit for this TikTok Shop listing:\n\nTitle: "${title}"\n${desc ? `\nDescription: "${desc.slice(0, 400)}"` : ''}\n\nAudit score: ${score}/100. Issues: ${issues}. Opportunities: ${opps}.\n\nWrite: 1) Top 3 priority fixes (with exact wording examples), 2) Quick wins to implement today, 3) Long-term SEO strategy for this listing type, 4) One improved title rewrite.`,
+    'audit-ai-out', 'audit-loader'
+  );
+}
+
+// ══════════════════════════════════════════════
+// IDEATION
+// ══════════════════════════════════════════════
+async function generateIdeas() {
+  const product = document.getElementById('idea-product').value.trim() || STATE.product;
+  const type = document.getElementById('idea-type').value;
+  if (!product) { alert('Enter a product or niche.'); return; }
+
+  const loader = document.getElementById('idea-loader');
+  loader.style.display = 'flex';
+  document.getElementById('idea-grid').innerHTML = '';
+  document.getElementById('idea-extra').style.display = 'none';
+
+  const typeLabels = {
+    video: 'TikTok Video Hooks',
+    caption: 'Caption Templates',
+    keyword: 'Keyword Angles',
+    trend: 'Trend Hijacking',
+    collab: 'Creator Collab Pitches',
+    challenge: 'Challenge Concepts',
+  };
+
+  const ideas = await callAIJSON(
+    'You are a TikTok Shop content strategist. Respond ONLY with valid JSON, no markdown.',
+    `Generate 6 ${typeLabels[type]} for a TikTok Shop seller of "${product}" in the US.
+     Each: {title, text, tags: string[3]}.
+     title = short label, text = the actual hook/caption/angle/pitch (2-3 sentences), tags = 3 relevant TikTok hashtags.
+     Return JSON array only.`
+  );
+
+  loader.style.display = 'none';
+
+  if (ideas && Array.isArray(ideas)) {
+    const colors = ['var(--tt)', 'var(--accent)', 'var(--green)', 'var(--yellow)', 'var(--tt)', 'var(--accent)'];
+    document.getElementById('idea-grid').innerHTML = ideas.map((idea, i) => `
+      <div class="idea-card">
+        <div class="idea-label" style="color:${colors[i]}">${typeLabels[type]}</div>
+        <div class="idea-text">${idea.text}</div>
+        <div class="idea-tags">
+          ${(idea.tags || []).map(t => `<span class="badge b-tt">${t}</span>`).join('')}
+        </div>
+      </div>`).join('');
+  }
+
+  // Deeper AI insights
+  document.getElementById('idea-extra').style.display = 'block';
+  await callAI(
+    'You are a TikTok Shop content strategist. Give concise, strategic insights.',
+    `Give 3 trending content angles and strategic insights for a "${product}" seller on TikTok Shop US using ${typeLabels[type]}. Include: what's working right now, an underused angle competitors miss, and one viral format to try this week.`,
+    'idea-ai-out', null
+  );
+  document.getElementById('idea-ai-out').style.display = 'block';
+}
+
+// ══════════════════════════════════════════════
+// AI ASSISTANT
+// ══════════════════════════════════════════════
+async function askAssistant() {
+  const question = document.getElementById('ai-question').value.trim();
+  if (!question) { alert('Type a question first.'); return; }
+
+  const brand = document.getElementById('ai-brand-ctx').value.trim();
+  const product = document.getElementById('ai-product-ctx').value.trim();
+  const market = document.getElementById('ai-market-ctx').value.trim() || 'US';
+
+  const context = [
+    brand ? `Brand: ${brand}` : '',
+    product ? `Product/niche: ${product}` : '',
+    `Market: ${market}`,
+  ].filter(Boolean).join(' | ');
+
+  await callAI(
+    `You are an expert TikTok Shop SEO strategist with deep knowledge of TikTok's search algorithm, keyword optimisation, listing strategy, hashtag tactics, and competitor analysis. Give specific, actionable advice. Context: ${context}`,
+    question,
+    'ai-out', 'ai-loader'
+  );
+}
+
+function setPrompt(text) {
+  document.getElementById('ai-question').value = text;
+  document.getElementById('ai-question').focus();
+}
+
+function clearChat() {
+  document.getElementById('ai-question').value = '';
+  document.getElementById('ai-out').innerHTML = '<span class="ai-empty">Ask a question above to get started.</span>';
+}
+
+// ══════════════════════════════════════════════
 // INIT
-// ====================================================
-renderDashboard();
-renderKeywords();
-renderSuggestChips();
-scoreListing();
+// ══════════════════════════════════════════════
 renderCompTable();
-renderTikTokKws();
-renderHashtags();
-renderTTTemplates();
 </script>
 </body>
 </html>
